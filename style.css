@@ -269,6 +269,11 @@ dl {
   src: url("assets/fonts/novecentowidelight.eot"), url("assets/fonts/novecentowidelight.ttf") format("truetype"), url("assets/fonts/novecentowidelight.svg#novecentowidelight") format("svg");
   font-weight: normal;
   font-style: normal; }
+#drawer-nav .menu li {
+  font-family: "NoveMedium";
+  font-size: 1.1875em;
+  color: #472e13; }
+
 #index-contact .phone-number, #index-info {
   font-family: "NoveBook";
   font-size: 1em;
@@ -284,6 +289,99 @@ html, body, #page {
 
 #fallback-navigation.hide {
   display: none; }
+
+#drawer-menu {
+  position: fixed;
+  right: 3em;
+  top: 3em;
+  z-index: 9999;
+  height: 4.875em;
+  width: 4.875em;
+  background-color: white;
+  border: 1.5em solid #bfd33b;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+  #drawer-menu:after, #drawer-menu:before {
+    position: absolute;
+    content: "";
+    width: 1.875em;
+    height: 0.375em;
+    background-color: #bfd33b;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+  #drawer-menu:before {
+    top: 0.375em; }
+  #drawer-menu:after {
+    top: 1.125em; }
+  #drawer-menu.push {
+    right: 300px;
+    border-color: white;
+    width: 4em; }
+    #drawer-menu.push:before, #drawer-menu.push:after {
+      width: 1.5em; }
+    #drawer-menu.push:before {
+      top: 0.1875em;
+      -webkit-transform: rotate(60deg);
+      -moz-transform: rotate(60deg);
+      -ms-transform: rotate(60deg);
+      -o-transform: rotate(60deg);
+      transform: rotate(60deg); }
+    #drawer-menu.push:after {
+      top: 1.3125em;
+      -webkit-transform: rotate(-60deg);
+      -moz-transform: rotate(-60deg);
+      -ms-transform: rotate(-60deg);
+      -o-transform: rotate(-60deg);
+      transform: rotate(-60deg); }
+
+.sidr {
+  display: none;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  z-index: 999999;
+  width: 300px;
+  overflow-x: none;
+  overflow-y: auto;
+  background: rgba(191, 211, 59, 0.6); }
+
+.sidr.right {
+  left: auto;
+  right: -300px; }
+
+.sidr.left {
+  left: -300px;
+  right: auto; }
+
+#drawer-nav .menu {
+  margin-top: 3em; }
+  #drawer-nav .menu li {
+    text-align: center;
+    margin-top: 1.5em; }
+    #drawer-nav .menu li:first-child {
+      text-indent: -9999px;
+      white-space: nowrap;
+      position: relative;
+      margin-bottom: 2em; }
+      #drawer-nav .menu li:first-child:before {
+        text-indent: 0;
+        content: "\f015";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.75em;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+        border-bottom: 2px solid rgba(235, 215, 193, 0.6);
+        padding: 0 2em .5em; }
 
 #index {
   max-width: 68em;
@@ -320,9 +418,11 @@ html, body, #page {
 #index-logo {
   margin: 0 auto;
   background: url("assets/images/logo.png") no-repeat center center;
-  width: 247px;
-  height: 214px;
-  margin-bottom: 3em; }
+  background-size: cover;
+  width: 75%;
+  height: 0;
+  padding-bottom: 64.4%;
+  margin-bottom: 1.5em; }
 
 #index-contact .phone-number {
   display: inline-block;

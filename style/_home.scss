@@ -29,10 +29,12 @@
 
 #index-logo{
   margin: 0 auto;
-  background: url('assets/images/logo.png') no-repeat center center; 
-  width: 247px;
-  height: 214px;
-  margin-bottom: $base-line-height * 2;
+  background: url('assets/images/logo.png') no-repeat center center;
+  background-size: cover;
+  width: 75%;
+  height: 0;
+  padding-bottom: 64.4%;
+  margin-bottom: $base-line-height;
 }
 
 

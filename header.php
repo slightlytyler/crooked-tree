@@ -11,8 +11,6 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-<?php wp_enqueue_script('skrollr', 'js/skrollr.js', array('jquery')); // Load Skrollr ?>
-
 <?php wp_head(); ?>
 </head>
 
@@ -22,3 +20,12 @@
 		<nav id="fallback-navigation" class="hide" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
+
+    <a id="drawer-menu" href="#sidr"></a>
+     
+    <div id="sidr">
+      <nav id="drawer-nav" role="navigation">
+        <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+      </nav>
+    </div>
+    

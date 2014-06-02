@@ -1,1 +1,116 @@
 // Drawer Nav
+
+$drawer-width: 300px;
+
+// Hamburger
+
+#drawer-menu{
+  position: fixed;
+  right: $base-line-height * 2;
+  top: $base-line-height * 2;
+  z-index: 9999;
+  @include size(em(78));
+  background-color: white;
+  border: em(24) solid $yellow;
+  @include transition (all .2s ease-in-out);
+
+  // Lines
+
+  &:after, &:before{
+    position: absolute;
+    content: "";
+    width: em(30);
+    height: em(6);
+    background-color: $yellow;
+    @include transition (all .2s ease-in-out);
+  }
+
+   &:before{
+    top: em(6);
+  }
+
+  &:after{
+    top: em(18);
+  }
+
+  // Sidr push
+
+  &.push{
+    right: $drawer-width;
+    border-color: white;
+    width: em(64);
+    &:before, &:after{
+      width: em(24);
+    }
+
+    &:before{
+      top: em(3);
+      @include transform(rotate(60deg));
+    }
+
+    &:after{
+      top: em(21);
+      @include transform(rotate(-60deg));
+    }
+  }
+}
+
+// Sidr styles
+
+.sidr {
+display: none;
+position: fixed;
+top: 0;
+height: 100%;
+z-index: 999999;
+width: $drawer-width;
+overflow-x: none;
+overflow-y: auto;
+background: $yellow-a;
+}
+
+.sidr.right {
+left: auto;
+right:-$drawer-width;
+}
+
+.sidr.left {
+left:-$drawer-width;
+right:auto;
+}
+
+#drawer-nav{
+  .menu{
+    margin-top: $base-line-height * 2;
+
+    li{
+      @extend %type-nav-link;
+      text-align: center;
+      margin-top: $base-line-height;
+
+      &:first-child{
+        text-indent: -9999px; 
+        white-space: nowrap;
+        position: relative;
+        margin-bottom: $base-line-height + .5em;
+
+        &:before{
+        text-indent: 0; 
+        content: "\f015";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        font-size: em(28);
+
+        position: absolute;
+        top: 0;
+        left: 50%;
+        @include transform(translateX(-50%));
+
+        border-bottom: 2px solid $coffee-a;
+        padding: 0 2em .5em;
+        }
+      }
+    }
+  }
+}
