@@ -6,6 +6,18 @@
 
 // Main
 
-h1{
-  font-family: $nove-medium;
-}
+// Nav
+
+@import "fallback-nav";
+@import "drawer";
+
+// Pages
+
+@import "home";
+@import "about";
+@import "menu";
+@import "contact";
+
+// Footer
+
+@import "footer";

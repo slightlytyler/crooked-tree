@@ -4,9 +4,9 @@
  */
 ?>
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="footer" class="hide" role="contentinfo">
     Footer Here
-	</footer><!-- #colophon -->
+	</footer>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

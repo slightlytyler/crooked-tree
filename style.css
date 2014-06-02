@@ -269,5 +269,5 @@ dl {
   src: url("assets/fonts/novecentowidelight.eot"), url("assets/fonts/novecentowidelight.ttf") format("truetype"), url("assets/fonts/novecentowidelight.svg#novecentowidelight") format("svg");
   font-weight: normal;
   font-style: normal; }
-h1 {
-  font-family: "NoveMedium"; }
+footer#footer.hide {
+  display: none; }
