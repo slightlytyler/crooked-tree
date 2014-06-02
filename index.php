@@ -4,6 +4,6 @@
  */
 get_header(); ?>
 
-	Body Here
+	<h1>Body Here</h1>
 
 <?php get_footer(); ?>

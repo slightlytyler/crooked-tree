@@ -1,4 +1,11 @@
 @import "bourbon/bourbon";
+@import "bitters/bitters";
 @import "neat/neat";
 
+@import "fonts";
+
 // Main
+
+h1{
+  font-family: $nove-medium;
+}
