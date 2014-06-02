@@ -73,12 +73,8 @@ a {
   text-decoration: none;
   -webkit-transition: color 0.1s linear;
   -moz-transition: color 0.1s linear;
-  transition: color 0.1s linear; }
-  a:hover {
-    color: black; }
-  a:active, a:focus {
-    color: black;
-    outline: none; }
+  transition: color 0.1s linear;
+  color: inherit !important; }
 
 hr {
   border-bottom: 1px solid #201301;
@@ -313,6 +309,10 @@ html, body, #page {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
+  @media screen and (max-width: 30em) {
+    #drawer-menu {
+      right: 0.75em;
+      top: 0.75em; } }
   #drawer-menu:after, #drawer-menu:before {
     position: absolute;
     content: "";
@@ -357,6 +357,8 @@ html, body, #page {
   overflow-x: none;
   overflow-y: auto;
   background: rgba(191, 211, 59, 0.6); }
+  .sidr.displace {
+    background-color: #bfd33b; }
 
 .sidr.right {
   left: auto;
@@ -427,7 +429,10 @@ html, body, #page {
   margin-right: auto;
   max-width: 100%;
   position: relative;
-  background: url("assets/images/Pic-Coffee-1.png") no-repeat center center fixed;
+  background-image: url("assets/images/Pic-Coffee-1.png");
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: 100%; }
@@ -435,15 +440,44 @@ html, body, #page {
     content: "";
     display: table;
     clear: both; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+    #index {
+      background-image: url("assets/images/Pic-Coffee-12x.png");
+      background-size: 100% 100% cover; } }
 
 #index-info {
   float: left;
   display: block;
   margin-right: 10.1484%;
   width: 26.56773%;
-  margin-left: 1.5em; }
+  padding-left: 1.5em; }
   #index-info:last-child {
     margin-right: 0; }
+  @media screen and (min-width: 48em) and (max-width: 68em) {
+    #index-info {
+      float: left;
+      display: block;
+      margin-right: 16.03631%;
+      width: 41.98184%; }
+      #index-info:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 30em) and (max-width: 48em) {
+    #index-info {
+      float: left;
+      display: block;
+      margin-right: 5.85151%;
+      width: 57.6594%; }
+      #index-info:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 30em) {
+    #index-info {
+      float: left;
+      display: block;
+      margin-right: 38.19821%;
+      width: 100%;
+      padding: 0 1.5em; }
+      #index-info:last-child {
+        margin-right: 0; } }
   #index-info > section {
     background-color: rgba(235, 215, 193, 0.6);
     width: 100%;
@@ -455,19 +489,25 @@ html, body, #page {
 
 #index-logo {
   margin: 0 auto;
-  background: url("assets/images/logo.png") no-repeat center center;
-  background-size: cover;
-  width: 75%;
-  height: 0;
+  background-image: url("assets/images/logo.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
   padding-bottom: 64.4%;
   margin-bottom: 1.5em; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+    #index-logo {
+      background-image: url("assets/images/logo2x.png");
+      background-size: 75% 0 cover; } }
 
 #index-contact .phone-number {
   display: inline-block;
-  margin-bottom: 0.75em; }
-#index-contact li {
-  font-size: 1.9375em;
+  margin-bottom: 0.75em;
+  margin-right: 0; }
+#index-contact a {
   margin-right: 1em; }
+#index-contact li {
+  font-size: 1.9375em; }
   #index-contact li:last-child {
     margin-right: 0; }
 

@@ -7,8 +7,14 @@
 
 // Neat Breakpoints
 ///////////////////////////////////////////////////////////////////////////////
-$medium-screen: em(640);
-$large-screen: em(860);
+$x-small-screen: em(320);
+$small-screen: em(480);
+$medium-screen: em(768);
+$large-screen: em(1088);
+$x-large-screen: em(1440);
 
-$medium-screen-up: new-breakpoint(min-width $medium-screen 4);
-$large-screen-up: new-breakpoint(min-width $large-screen 8);
+$x-small-media: new-breakpoint(max-width $small-screen 2);
+$small-media: new-breakpoint(min-width $small-screen max-width $medium-screen 2);
+$medium-media: new-breakpoint(min-width $medium-screen max-width $large-screen 4);
+$large-media: new-breakpoint(min-width $large-screen max-width $x-large-screen 8);
+$large-media: new-breakpoint(min-width $x-large-screen 12);

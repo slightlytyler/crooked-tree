@@ -14,6 +14,11 @@ $drawer-width: 300px;
   border: em(24) solid $yellow;
   @include transition (all .2s ease-in-out);
 
+  @include media($x-small-media){
+    right: $base-line-height * .5;
+    top: $base-line-height * .5;
+  }
+
   // Lines
 
   &:after, &:before{
@@ -67,6 +72,10 @@ width: $drawer-width;
 overflow-x: none;
 overflow-y: auto;
 background: $yellow-a;
+
+  &.displace{
+    background-color: $yellow;
+  }
 }
 
 .sidr.right {

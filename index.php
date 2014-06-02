@@ -19,11 +19,11 @@ get_header(); ?>
       <ul>
     </section>
     <section id="index-contact">
-      <span class="phone-number">214.953.1142</span>
+      <a href="tel:2149531142" class="phone-number">214.953.1142</a>
       <ul class="social-media">
-        <li class="fa fa-facebook"></li>
-        <li class="fa fa-twitter"></li>
-        <li class="fa fa-envelope"></li>
+        <a href="https://www.facebook.com/crookedtreecoffee"><li class="fa fa-facebook"></li></a>
+        <a href="https://twitter.com/crookedtree"><li class="fa fa-twitter"></li></a>
+        <a href="mailto:info@crookedtreecoffeehouse.com"><li class="fa fa-envelope"></li></a>
       </ul>
     </section>
     </div>

@@ -36,8 +36,8 @@
         </form> 
       </section>
       <section id="drawer-contact">
-        <a>214-953-1142</a>
-        <a>info@crookedtreecoffeehouse.com</a>
+        <a href="tel:2149531142">214-953-1142</a>
+        <a href="mailto:info@crookedtreecoffeehouse.com">info@crookedtreecoffeehouse.com</a>
       </section>
     </div>
     
