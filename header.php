@@ -11,7 +11,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-<?php wp_enqueue_script('skrollr', 'https://raw.githubusercontent.com/Prinzhorn/skrollr/master/dist/skrollr.min.js', array('jquery')); // Load Skrollr ?>
+<?php wp_enqueue_script('skrollr', 'js/skrollr.js', array('jquery')); // Load Skrollr ?>
 
 <?php wp_head(); ?>
 </head>

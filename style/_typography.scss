@@ -1,0 +1,89 @@
+// Basic set of typography extended classes
+
+%type-body{
+  font-family: $gotham;
+  font-size: em(18);
+  text-align: center;
+}
+
+%type-body-left{
+  @extend %type-body;
+  text-align: left;
+}
+
+%type-theme-h1{
+  font-family: $typewriter;
+  font-size: em(54);
+  color: white;
+  text-shadow: 0px 2px 4px $shadow;
+}
+
+%type-theme-h2{
+  font-family: $typewriter;
+  font-size: em(44);
+  color: $yellow;
+}
+
+%type-theme-h2{
+  font-family: $typewriter;
+  font-size: em(32);
+  color: $bean;
+}
+
+%type-theme-h4{
+  @extend %type-theme-h1;
+  font-size: em(32);
+  text-align: center;
+}
+
+%type-contact-label{
+  font-family: $gotham-light;
+  font-size: em(19);
+  color: $bean;
+}
+
+%type-sans-h1{
+  font-family: $nove-light;
+  font-size: em(44);
+  color: $bean;
+}
+
+%type-sans-h2{
+  font-family: $nove-medium;
+  font-size: em(22);
+  color: $bean;
+}
+
+%type-nav-link{
+  font-family: $nove-medium;
+  font-size: em(19);
+  color: $bean;
+}
+
+%type-nav-contact{
+  font-family: $gotham-light;
+  font-size: em(14);
+  color: $bean;
+}
+
+%type-index-info{
+  font-family: $nove;
+  font-size: em(16);
+  color: $bean;
+}
+
+%type-index-contact{
+  @extend %type-index-info;
+  font-size: em(22);
+}
+
+%type-founded{
+  font-family: $nove-medium;
+  font-size: em(52);
+  color: $yellow;
+}
+
+%type-product{
+  font-family: $gotham;
+  font-size: em(14);
+}
