@@ -27,5 +27,17 @@
       <nav id="drawer-nav" role="navigation">
         <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
       </nav>
+      <section id="mailing-list">
+        <h1>SUBSCRIBE</h1>
+        <form action="">
+          <input type="text" name="email" placeholder="jdoe@biz.com">
+          <button class="fa fa-play-circle" type="submit">
+          </button>
+        </form> 
+      </section>
+      <section id="drawer-contact">
+        <a>214-953-1142</a>
+        <a>info@crookedtreecoffeehouse.com</a>
+      </section>
     </div>
     

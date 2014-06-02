@@ -70,7 +70,6 @@ p {
   margin: 0 0 0.75em; }
 
 a {
-  color: #201301;
   text-decoration: none;
   -webkit-transition: color 0.1s linear;
   -moz-transition: color 0.1s linear;
@@ -269,10 +268,22 @@ dl {
   src: url("assets/fonts/novecentowidelight.eot"), url("assets/fonts/novecentowidelight.ttf") format("truetype"), url("assets/fonts/novecentowidelight.svg#novecentowidelight") format("svg");
   font-weight: normal;
   font-style: normal; }
-#drawer-nav .menu li {
-  font-family: "NoveMedium";
+#mailing-list input[name="email"] {
+  font-family: "GothamXLight";
   font-size: 1.1875em;
   color: #472e13; }
+
+#drawer-nav .menu li, #mailing-list h1 {
+  font-family: "NoveMedium";
+  font-size: 1.1875em;
+  color: #472e13;
+  text-align: center; }
+
+#drawer-contact {
+  font-family: "GothamXLight";
+  font-size: 0.875em;
+  color: #472e13;
+  text-align: center; }
 
 #index-contact .phone-number, #index-info {
   font-family: "NoveBook";
@@ -358,7 +369,6 @@ html, body, #page {
 #drawer-nav .menu {
   margin-top: 3em; }
   #drawer-nav .menu li {
-    text-align: center;
     margin-top: 1.5em; }
     #drawer-nav .menu li:first-child {
       text-indent: -9999px;
@@ -382,6 +392,34 @@ html, body, #page {
         transform: translateX(-50%);
         border-bottom: 2px solid rgba(235, 215, 193, 0.6);
         padding: 0 2em .5em; }
+
+#mailing-list {
+  position: absolute;
+  bottom: 7.5em;
+  width: 100%; }
+  #mailing-list h1 {
+    margin-bottom: 0.75em; }
+  #mailing-list input[name="email"] {
+    width: 75%;
+    margin: 0 auto;
+    border: none;
+    border-radius: 0;
+    padding-right: 2.2em; }
+  #mailing-list button[type="submit"] {
+    position: absolute;
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+    font-size: 2em;
+    color: #472e13;
+    top: .975em;
+    right: .75em; }
+
+#drawer-contact {
+  position: absolute;
+  bottom: 1.5em; }
 
 #index {
   max-width: 68em;
