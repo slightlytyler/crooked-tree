@@ -34,18 +34,55 @@
   @extend %type-theme-h1;
   font-size: em(32);
   text-align: center;
+
+  @include media($small-media){
+    font-size: em(28);
+  }
+
+  @include media($x-small-media){
+    font-size: em(18);
+  }
+}
+
+%type-contact-details{
+  font-family: $gotham-light;
+  font-size: em(16);
+  font-weight: bold;
+  color: $bean;
 }
 
 %type-contact-label{
-  font-family: $gotham-light;
-  font-size: em(19);
-  color: $bean;
+  @extend %type-contact-details;
+
+  @include media($small-media){
+    font-size: em(14);
+  }
+
+  @include media($x-small-media){
+    font-family: $gotham;
+    font-size: em(8);
+  }
+}
+
+%type-contact-label-phone{
+  @extend %type-contact-label;
+  font-size: em(28);
+  font-weight: normal;
 }
 
 %type-sans-h1{
   font-family: $nove-light;
   font-size: em(44);
   color: $bean;
+  text-align: center;
+
+  @include media($small-media){
+    font-size: em(40);
+  }
+
+  @include media($x-small-media){
+    font-size: em(36);
+  }
 }
 
 %type-sans-h2{
@@ -66,6 +103,10 @@
   font-size: em(14);
   color: $bean;
   text-align: center;
+
+  @include media($x-small-media){
+    font-size: em(10);
+  }
 }
 
 %type-index-info{

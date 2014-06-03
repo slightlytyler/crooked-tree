@@ -265,10 +265,51 @@ dl {
   src: url("assets/fonts/novecentowidelight.eot"), url("assets/fonts/novecentowidelight.ttf") format("truetype"), url("assets/fonts/novecentowidelight.svg#novecentowidelight") format("svg");
   font-weight: normal;
   font-style: normal; }
-#mailing-list input[name="email"] {
+#contact-info h2 {
+  font-family: "AmericanTypewriter";
+  font-size: 3.375em;
+  color: white;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); }
+
+#contact-info h2 {
+  font-size: 2em;
+  text-align: center; }
+  @media screen and (min-width: 26.25em) and (max-width: 48em) {
+    #contact-info h2 {
+      font-size: 1.75em; } }
+  @media screen and (max-width: 26.25em) {
+    #contact-info h2 {
+      font-size: 1.125em; } }
+
+#contact-info li .phone, #contact-info li, #mailing-list input[name="email"] {
   font-family: "GothamXLight";
-  font-size: 1.1875em;
+  font-size: 1em;
+  font-weight: bold;
   color: #472e13; }
+
+@media screen and (min-width: 26.25em) and (max-width: 48em) {
+  #contact-info li .phone, #contact-info li {
+    font-size: 0.875em; } }
+@media screen and (max-width: 26.25em) {
+  #contact-info li .phone, #contact-info li {
+    font-family: "GothamBook";
+    font-size: 0.5em; } }
+
+#contact-info li .phone {
+  font-size: 1.75em;
+  font-weight: normal; }
+
+#contact-info h1 {
+  font-family: "NoveLight";
+  font-size: 2.75em;
+  color: #472e13;
+  text-align: center; }
+  @media screen and (min-width: 26.25em) and (max-width: 48em) {
+    #contact-info h1 {
+      font-size: 2.5em; } }
+  @media screen and (max-width: 26.25em) {
+    #contact-info h1 {
+      font-size: 2.25em; } }
 
 #drawer-nav .menu li, #mailing-list h1 {
   font-family: "NoveMedium";
@@ -281,6 +322,9 @@ dl {
   font-size: 0.875em;
   color: #472e13;
   text-align: center; }
+  @media screen and (max-width: 26.25em) {
+    #drawer-contact {
+      font-size: 0.625em; } }
 
 #index-contact .phone-number, #index-info {
   font-family: "NoveBook";
@@ -289,6 +333,24 @@ dl {
 
 #index-contact .phone-number {
   font-size: 1.375em; }
+
+#index, #contact {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  position: relative;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto; }
+  #index:after, #contact:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .fill#index, .fill#contact {
+    height: 100%; }
 
 html, body, #page {
   margin: 0;
@@ -307,10 +369,17 @@ html, body, #page {
   width: 4.875em;
   background-color: white;
   border: 1.5em solid #bfd33b;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out; }
-  @media screen and (max-width: 30em) {
+  -webkit-transition: all 0.1971s;
+  -moz-transition: all 0.1971s;
+  transition: all 0.1971s;
+  -webkit-transition-delay: 0.029s;
+  -moz-transition-delay: 0.029s;
+  transition-delay: 0.029s; }
+  @media screen and (min-width: 26.25em) and (max-width: 48em) {
+    #drawer-menu {
+      right: 0.75em;
+      top: 0.75em; } }
+  @media screen and (max-width: 26.25em) {
     #drawer-menu {
       right: 0.75em;
       top: 0.75em; } }
@@ -320,9 +389,12 @@ html, body, #page {
     width: 1.875em;
     height: 0.375em;
     background-color: #bfd33b;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out; }
+    -webkit-transition: all 0.1971s;
+    -moz-transition: all 0.1971s;
+    transition: all 0.1971s;
+    -webkit-transition-delay: 0.029s;
+    -moz-transition-delay: 0.029s;
+    transition-delay: 0.029s; }
   #drawer-menu:before {
     top: 0.375em; }
   #drawer-menu:after {
@@ -331,7 +403,7 @@ html, body, #page {
     right: 300px;
     border-color: white;
     width: 4em; }
-    @media screen and (max-width: 30em) {
+    @media screen and (max-width: 26.25em) {
       #drawer-menu.push {
         right: calc(100% - 4em); } }
     #drawer-menu.push:before, #drawer-menu.push:after {
@@ -361,7 +433,7 @@ html, body, #page {
   overflow-x: none;
   overflow-y: auto;
   background: rgba(191, 211, 59, 0.6); }
-  @media screen and (max-width: 30em) {
+  @media screen and (max-width: 26.25em) {
     .sidr {
       width: calc(100% - 4em); } }
   .sidr.displace {
@@ -370,14 +442,14 @@ html, body, #page {
 .sidr.right {
   left: auto;
   right: -300px; }
-  @media screen and (max-width: 30em) {
+  @media screen and (max-width: 26.25em) {
     .sidr.right {
       right: -calc(100% - 4em); } }
 
 .sidr.left {
   left: -300px;
   right: auto; }
-  @media screen and (max-width: 30em) {
+  @media screen and (max-width: 26.25em) {
     .sidr.left {
       left: -calc(100% - 4em); } }
 
@@ -385,11 +457,13 @@ html, body, #page {
   text-align: center; }
   #drawer-nav .menu li {
     margin-top: 1.5em; }
-    @media screen and (max-width: 30em) {
+    @media screen and (max-width: 26.25em) {
       #drawer-nav .menu li {
-        margin-top: 0.375em; } }
+        margin-top: 0.5em; } }
     #drawer-nav .menu li:first-child {
       display: none; }
+    #drawer-nav .menu li:nth-child(2) {
+      margin-top: 1.125em; }
 
 #drawer-home {
   display: inline-block;
@@ -403,11 +477,14 @@ html, body, #page {
   position: absolute;
   bottom: 7.5em;
   width: 100%; }
-  @media screen and (max-width: 30em) {
+  @media screen and (max-width: 26.25em) {
     #mailing-list {
-      bottom: 4.5em; } }
+      bottom: 3em; } }
   #mailing-list h1 {
     margin-bottom: 0.75em; }
+    @media screen and (max-width: 26.25em) {
+      #mailing-list h1 {
+        margin-bottom: 0.375em; } }
   #mailing-list form {
     width: 75%;
     margin: 0 auto;
@@ -416,7 +493,7 @@ html, body, #page {
     margin: 0 auto;
     border: none;
     border-radius: 0;
-    padding-right: 2.2em; }
+    padding-right: 3em; }
   #mailing-list button[type="submit"] {
     position: absolute;
     padding: 0;
@@ -428,7 +505,7 @@ html, body, #page {
     text-shadow: none;
     font-size: 2em;
     color: #472e13;
-    top: .6em;
+    top: .52em;
     right: 0;
     -webkit-transform: translateX(-50%) translateY(-50%);
     -moz-transform: translateX(-50%) translateY(-50%);
@@ -440,38 +517,22 @@ html, body, #page {
   position: absolute;
   bottom: 1.5em;
   width: 100%; }
-  @media screen and (max-width: 30em) {
+  @media screen and (max-width: 26.25em) {
     #drawer-contact {
       bottom: 0.75em; } }
   #drawer-contact a {
     display: block;
     margin: 0 auto; }
-    @media screen and (max-width: 30em) {
+    @media screen and (max-width: 26.25em) {
       #drawer-contact a {
         line-height: 1.125em; } }
 
 #index {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  position: relative;
-  background-image: url("assets/images/Pic-Coffee-1.png");
-  background-position: center center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%; }
-  #index:after {
-    content: "";
-    display: table;
-    clear: both; }
+  background-image: url("assets/images/Pic-Coffee-1.png"); }
   @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
     #index {
       background-image: url("assets/images/Pic-Coffee-12x.png");
       background-size: 100% 100% cover; } }
-  #index.fill {
-    height: auto; }
 
 #index-info {
   float: left;
@@ -490,7 +551,7 @@ html, body, #page {
       width: 41.98184%; }
       #index-info:last-child {
         margin-right: 0; } }
-  @media screen and (min-width: 30em) and (max-width: 48em) {
+  @media screen and (min-width: 26.25em) and (max-width: 48em) {
     #index-info {
       float: left;
       display: block;
@@ -498,7 +559,7 @@ html, body, #page {
       width: 57.6594%; }
       #index-info:last-child {
         margin-right: 0; } }
-  @media screen and (max-width: 30em) {
+  @media screen and (max-width: 26.25em) {
     #index-info {
       float: left;
       display: block;
@@ -539,6 +600,78 @@ html, body, #page {
   font-size: 1.9375em; }
   #index-contact li:last-child {
     margin-right: 0; }
+
+#contact {
+  background-image: url("assets/images/Pic-Coffee-2.png"); }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+    #contact {
+      background-image: url("assets/images/Pic-Coffee-22x.png");
+      background-size: 100% 100% cover; } }
+
+#contact-info {
+  float: left;
+  display: block;
+  margin-right: 38.19821%;
+  width: 100%;
+  padding: 0 1em;
+  margin: 4.5em auto 1.5em; }
+  #contact-info:last-child {
+    margin-right: 0; }
+  #contact-info h1 {
+    padding: .6em 0; }
+  #contact-info h2 {
+    margin-bottom: 0.75em; }
+  #contact-info .title {
+    background-color: rgba(235, 215, 193, 0.6);
+    width: 100%;
+    max-width: 25em;
+    margin: 0 auto 3em; }
+  #contact-info ul {
+    width: 100%;
+    max-width: 30em;
+    margin: 0 auto; }
+  #contact-info li {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 2px solid #bfd33b;
+    border-radius: 2.5em;
+    text-align: center;
+    margin-bottom: 3em; }
+    #contact-info li i {
+      font-size: 2em;
+      position: absolute;
+      left: .6em;
+      -webkit-transform: translateY(20%);
+      -moz-transform: translateY(20%);
+      -ms-transform: translateY(20%);
+      -o-transform: translateY(20%);
+      transform: translateY(20%); }
+      @media screen and (min-width: 26.25em) and (max-width: 48em) {
+        #contact-info li i {
+          -webkit-transform: translateY(30%);
+          -moz-transform: translateY(30%);
+          -ms-transform: translateY(30%);
+          -o-transform: translateY(30%);
+          transform: translateY(30%); } }
+      @media screen and (max-width: 26.25em) {
+        #contact-info li i {
+          -webkit-transform: translateY(60%);
+          -moz-transform: translateY(60%);
+          -ms-transform: translateY(60%);
+          -o-transform: translateY(60%);
+          transform: translateY(60%);
+          left: 1.2em; } }
+    #contact-info li span {
+      display: inline-block;
+      padding: .7em 0; }
+    #contact-info li .phone {
+      padding: .4em 0; }
+    @media screen and (max-width: 26.25em) {
+      #contact-info li .info {
+        padding-left: 6%; } }
+    @media screen and (max-width: 26.25em) {
+      #contact-info li .booking {
+        padding-left: 8%; } }
 
 footer#footer.hide {
   display: none; }

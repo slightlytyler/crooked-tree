@@ -1,1 +1,83 @@
 // Contact
+
+#contact{
+  @extend %full-page;
+  @include retina-image(assets/images/Pic-Coffee-2, 100% 100% cover, png, null, 2x, false);
+}
+
+#contact-info{
+  @include span-columns(1 of 1);
+  padding: 0 1em;
+  margin: ($base-line-height * 3) auto $base-line-height;
+
+  h1{
+    @extend %type-sans-h1;
+    padding: .6em 0;
+  }
+
+  h2{
+    @extend %type-theme-h4;
+    margin-bottom: $base-line-height / 2;
+  }
+
+  .title{
+    background-color: $coffee-a;
+    width: 100%;
+    max-width: em(400);
+    margin: 0 auto ($base-line-height * 2);
+  }
+
+  ul{
+    width: 100%;
+    max-width: em(480);
+    margin: 0 auto;
+  }
+
+  li{
+    position: relative;
+    background-color: $white-a;
+    border: 2px solid $yellow;
+    border-radius: em(40);
+    @extend %type-contact-label;
+    text-align: center;
+    margin-bottom: $base-line-height * 2;
+    i{
+      font-size: em(32);
+      position: absolute;
+      left: .6em;
+      @include transform(translateY(20%));
+
+      @include media($small-media){
+        @include transform(translateY(30%));
+      }
+
+      @include media($x-small-media){
+        @include transform(translateY(60%));
+        left: 1.2em;
+      }
+    }
+
+    span{
+      display: inline-block;
+      padding: .7em 0;
+    }
+
+    .phone{
+      @extend %type-contact-label-phone;
+      padding: .4em 0;
+    }
+
+    .info{
+      @include media($x-small-media){
+        padding-left: 6%;
+      }
+    }
+
+    .booking{
+      @include media($x-small-media){
+        padding-left: 8%;
+      }
+    }
+  }
+}
+

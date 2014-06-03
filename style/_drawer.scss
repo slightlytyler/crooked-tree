@@ -13,7 +13,13 @@ $mobile-drawer-width: calc(100% - 4em);
   @include size(em(78));
   background-color: white;
   border: em(24) solid $yellow;
-  @include transition (all .2s ease-in-out);
+  @include transition (all .1971s);
+  @include transition-delay(.029s);
+
+  @include media($small-media){
+    right: $base-line-height * .5;
+    top: $base-line-height * .5;
+  }
 
   @include media($x-small-media){
     right: $base-line-height * .5;
@@ -28,7 +34,8 @@ $mobile-drawer-width: calc(100% - 4em);
     width: em(30);
     height: em(6);
     background-color: $yellow;
-    @include transition (all .2s ease-in-out);
+    @include transition (all .1971s);
+    @include transition-delay(.029s);
   }
 
    &:before{
@@ -116,11 +123,15 @@ right:auto;
       margin-top: $base-line-height;
 
       @include media($x-small-media){
-        margin-top: $base-line-height / 4;
+        margin-top: $base-line-height / 3;
       }
 
       &:first-child{
         display: none;
+      }
+
+      &:nth-child(2){
+        margin-top: $base-line-height * .75;
       }
     }
   }
@@ -141,12 +152,16 @@ right:auto;
   width: 100%;
 
   @include media($x-small-media){
-    bottom: $base-line-height * 3;
+    bottom: $base-line-height * 2;
   }
 
   h1{
     @extend %type-nav-link;
     margin-bottom: $base-line-height / 2;
+
+    @include media($x-small-media){
+      margin-bottom: $base-line-height / 4;
+    }
   }
 
   form{
@@ -156,11 +171,11 @@ right:auto;
   }
 
   input[name="email"]{
-    @extend %type-contact-label;
+    @extend %type-contact-details;
     margin: 0 auto;
     border: none;
     border-radius: 0;
-    padding-right: 2.2em;
+    padding-right: 3em;
   }
 
   button[type="submit"]{
@@ -174,7 +189,7 @@ right:auto;
     text-shadow: none;
     font-size: 2em;
     color: $bean;
-    top: .6em;
+    top: .52em;
     right: 0;
     @include transform(translateX(-50%) translateY(-50%));
   }

@@ -4,8 +4,8 @@
  */
 get_header(); ?>
 
-	<div id="index">
-    <div id="index-info">
+	<div id="index" class="outer-page">
+    <div id="index-info" class="inner-page">
     <section id="identity">
       <section id="index-logo"></section>
       <span class="address">2414 ROUTH ST DALLAS, TX 75201</span>

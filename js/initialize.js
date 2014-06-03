@@ -1,5 +1,9 @@
 jQuery(document).ready(function() {
 
+    jQuery(window).load(function() {
+         $("html,body").animate({scrollTop: 0}, 0);
+    });
+
     // Disable scroll for when drawer opens
 
     var mobileScrollDisable = false; // default
@@ -107,18 +111,20 @@ jQuery(document).ready(function() {
 
     }, false);
 
-    // Index Height Fix;
+    // Index height Fix;
+    var innerHeight = jQuery('.inner-page').outerHeight(true);
+    var windowHeight = jQuery(window).height()
 
-    if (jQuery('#index-info').height() > jQuery(window).height()){
-        jQuery('#index').addClass('fill');
+    if ( innerHeight < windowHeight ){
+        jQuery('.outer-page').addClass('fill');
     }
 
     jQuery(window).resize(function() {
-        if (jQuery('#index-info').height() > jQuery(window).height()){
-            jQuery('#index').addClass('fill');
+        if (innerHeight < outerHeight){
+            jQuery('.outer-page').addClass('fill');
         }
         else {
-            jQuery('#index').removeClass('fill');
+            jQuery('.outer-page').removeClass('fill');
         }
     });
 });

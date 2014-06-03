@@ -1,19 +1,8 @@
 // Index
 
 #index{
-  @include outer-container;
-  max-width: 100%;
-  position: relative;
+  @extend %full-page;
   @include retina-image(assets/images/Pic-Coffee-1, 100% 100% cover, png, null, 2x, false);
-  background-position: center center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-
-  &.fill{
-    height: auto;
-  }
 }
 
 #index-info{
