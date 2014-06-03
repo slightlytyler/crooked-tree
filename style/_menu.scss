@@ -33,71 +33,17 @@
   }
 
   li{
-    text-align: center;
-    background-color: white;
-    padding: $base-line-height 4em;
     margin-bottom: $base-line-height;
-    box-shadow: 0 0 4px 0 $shadow;
-
-    @include media($large-media){
-      padding: $base-line-height 3em; 
-    }
-
-    @include media($medium-media){
-      padding: $base-line-height 2em; 
-    }
-
-    @include media($small-media){
-      padding: $base-line-height 1em; 
-    }
-
-    @include media($x-small-media){
-      padding: $base-line-height 1em; 
-    }
+    @extend %floating-div;
 
     &:last-child{
       margin-bottom: 0;
     }
 
     .header{
-      position: relative;
-
-      &:before{
-        content: "";
-        height: 3px;
-        @include calc(width, "50% - 2.5em");
-        background-color: $yellow;
-        position: absolute;
-        top: 50%;
-        @include transform(translateY(-.4em));
-        left: 0; 
-      }
-
-      &:after{
-        content: "";
-        height: 3px;
-        @include calc(width, "50% - 2.5em");
-        background-color: $yellow;
-        position: absolute;
-        top: 50%;
-        @include transform(translateY(-.4em));
-        right: 0; 
-      }
+      @extend %picto-header
     }
 
-    i{
-      color: $bean;
-      font-size: em(32);
-      margin-bottom: $base-line-height / 4;
-    }
-
-    h3{
-      margin-bottom: $base-line-height / 2;
-    }
-
-    p{
-      @extend %type-body;
-      line-height: $base-line-height;
-    }
+    @extend %item-card;
   }
 }

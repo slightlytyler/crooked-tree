@@ -1,5 +1,16 @@
 jQuery(document).ready(function() {
 
+    // Some vars
+
+    var innerHeight = jQuery('.inner-page').outerHeight(true);
+    var windowHeight = jQuery(window).height();
+    var windowWidth = jQuery(window).width();
+
+    jQuery(window).resize(function() {
+        windowHeight = jQuery(window).height()
+        windowWidth = jQuery(window).width();
+    });
+
     // Scroll to top on load
 
     jQuery(window).load(function() {
@@ -121,9 +132,7 @@ jQuery(document).ready(function() {
 
     }, false);
 
-    // Index height Fix;
-    var innerHeight = jQuery('.inner-page').outerHeight(true);
-    var windowHeight = jQuery(window).height()
+    // Index height fix
 
     if ( innerHeight < windowHeight ){
         jQuery('.outer-page').addClass('fill');
@@ -137,4 +146,20 @@ jQuery(document).ready(function() {
             jQuery('.outer-page').removeClass('fill');
         }
     });
+
+    // About Us title center
+
+    jQuery('#about-us-info .title').css('top', windowHeight / 2);
+    jQuery('#about-us-info .title').css('left', windowWidth / 2);
+    jQuery('#about-us-info .title').addClass('centered');
+
+    jQuery(window).resize(function() {
+        jQuery('#about-us-info .title').css('top', windowHeight / 2);
+        jQuery('#about-us-info .title').css('left', windowWidth / 2);
+    });
+
+    // About us welcome push
+
+    jQuery('#about-us-info').css('padding-top', windowHeight);
+
 });

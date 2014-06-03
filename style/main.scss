@@ -10,14 +10,18 @@
 
 @import "typography";
 
-%full-page{
-  @include outer-container;
-  max-width: 100%;
-  position: relative;
+%full-page-image{
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+%full-page{
+  @extend %full-page-image;
+  @include outer-container;
+  max-width: 100%;
+  position: relative;
   height: auto;
 
   &.fill{
@@ -42,6 +46,72 @@
   @include span-columns(1 of 1);
   padding: 0 1em;
   margin: ($base-line-height * 3) auto $base-line-height;
+}
+
+%floating-div{
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 0 4px 0 $shadow;
+  padding: $base-line-height 4em;
+
+  @include media($large-media){
+    padding: $base-line-height 3em; 
+  }
+
+  @include media($medium-media){
+    padding: $base-line-height 2em; 
+  }
+
+  @include media($small-media){
+    padding: $base-line-height 1em; 
+  }
+
+  @include media($x-small-media){
+    padding: $base-line-height 1em; 
+  }
+}
+
+%item-card{
+  & > i{
+    color: $bean;
+    font-size: em(32);
+    margin-bottom: $base-line-height / 4;
+  }
+
+  h3{
+    margin-bottom: $base-line-height / 2;
+  }
+
+  p{
+    @extend %type-body;
+    line-height: $base-line-height;
+  }
+}
+
+%picto-header{
+  position: relative;
+
+    &:before{
+      content: "";
+      height: 3px;
+      @include calc(width, "50% - 2.5em");
+      background-color: $yellow;
+      position: absolute;
+      top: 50%;
+      @include transform(translateY(-.4em));
+      left: 0; 
+    }
+
+    &:after{
+      content: "";
+      height: 3px;
+      @include calc(width, "50% - 2.5em");
+      background-color: $yellow;
+      position: absolute;
+      top: 50%;
+      @include transform(translateY(-.4em));
+      right: 0; 
+    }
 }
 
 // Global

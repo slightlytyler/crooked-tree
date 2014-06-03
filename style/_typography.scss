@@ -24,6 +24,18 @@
   font-size: em(54);
   color: white;
   text-shadow: 0px 2px 4px $shadow;
+
+  @include media($medium-media){
+    font-size: em(46);
+  }
+
+  @include media($small-media){
+    font-size: em(36);
+  }
+
+  @include media($x-small-media){
+    font-size: em(28);
+  }
 }
 
 %type-theme-h2{

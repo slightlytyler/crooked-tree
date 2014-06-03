@@ -265,29 +265,38 @@ dl {
   src: url("assets/fonts/novecentowidelight.eot"), url("assets/fonts/novecentowidelight.ttf") format("truetype"), url("assets/fonts/novecentowidelight.svg#novecentowidelight") format("svg");
   font-weight: normal;
   font-style: normal; }
-#menu-info li p {
+#about-us-info .welcome p, #menu-info li p {
   font-family: "GothamBook";
   font-size: 1.125em;
   text-align: center; }
   @media screen and (min-width: 30em) and (max-width: 48em) {
-    #menu-info li p {
+    #about-us-info .welcome p, #menu-info li p {
       font-size: 1em; } }
   @media screen and (max-width: 30em) {
-    #menu-info li p {
+    #about-us-info .welcome p, #menu-info li p {
       font-size: 0.875em; } }
 
-#menu-info h2, #contact-info h2 {
+#menu-info h2, #contact-info h2, #about-us-info h2 {
   font-family: "AmericanTypewriter";
   font-size: 3.375em;
   color: white;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); }
+  @media screen and (min-width: 48em) and (max-width: 68em) {
+    #menu-info h2, #contact-info h2, #about-us-info h2 {
+      font-size: 2.875em; } }
+  @media screen and (min-width: 30em) and (max-width: 48em) {
+    #menu-info h2, #contact-info h2, #about-us-info h2 {
+      font-size: 2.25em; } }
+  @media screen and (max-width: 30em) {
+    #menu-info h2, #contact-info h2, #about-us-info h2 {
+      font-size: 1.75em; } }
 
-#menu-info h3, footer#footer h1 {
+#about-us-info h3, #menu-info h3, footer#footer h1 {
   font-family: "AmericanTypewriter";
   font-size: 2.75em;
   color: #bfd33b; }
   @media screen and (max-width: 30em) {
-    #menu-info h3, footer#footer h1 {
+    #about-us-info h3, #menu-info h3, footer#footer h1 {
       font-size: 2.25em; } }
 
 #menu-info h2, #contact-info h2 {
@@ -318,16 +327,16 @@ dl {
   font-size: 1.75em;
   font-weight: normal; }
 
-#menu-info .title h1, #contact-info .title h1 {
+#about-us-info .title h1, #menu-info .title h1, #contact-info .title h1 {
   font-family: "NoveLight";
   font-size: 2.75em;
   color: #472e13;
   text-align: center; }
   @media screen and (min-width: 30em) and (max-width: 48em) {
-    #menu-info .title h1, #contact-info .title h1 {
+    #about-us-info .title h1, #menu-info .title h1, #contact-info .title h1 {
       font-size: 2.5em; } }
   @media screen and (max-width: 30em) {
-    #menu-info .title h1, #contact-info .title h1 {
+    #about-us-info .title h1, #menu-info .title h1, #contact-info .title h1 {
       font-size: 2.25em; } }
 
 footer#footer h2, footer#footer #explore {
@@ -358,42 +367,102 @@ footer#footer h2, footer#footer #explore {
 #index-contact .phone-number {
   font-size: 1.375em; }
 
-#index, #menu, #contact {
+#index, #about-us, #menu, #contact {
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#index, #about-us, #menu, #contact {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
   position: relative;
-  background-position: center center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
   height: auto; }
-  #index:after, #menu:after, #contact:after {
+  #index:after, #about-us:after, #menu:after, #contact:after {
     content: "";
     display: table;
     clear: both; }
-  .fill#index, .fill#menu, .fill#contact {
+  .fill#index, .fill#about-us, .fill#menu, .fill#contact {
     height: 100%; }
 
-#menu-info .title, #contact-info .title {
+#about-us-info .title, #menu-info .title, #contact-info .title {
   background-color: rgba(235, 215, 193, 0.6);
   width: 100%;
   max-width: 25em;
   margin: 0 auto 3em;
   text-align: center; }
-  #menu-info .title h1, #contact-info .title h1 {
+  #about-us-info .title h1, #menu-info .title h1, #contact-info .title h1 {
     padding: .7em 0; }
 
-#menu-info, #contact-info {
+#about-us-info, #menu-info, #contact-info {
   float: left;
   display: block;
   margin-right: 38.19821%;
   width: 100%;
   padding: 0 1em;
   margin: 4.5em auto 1.5em; }
-  #menu-info:last-child, #contact-info:last-child {
+  #about-us-info:last-child, #menu-info:last-child, #contact-info:last-child {
     margin-right: 0; }
+
+#about-us-info .welcome, #menu-info li {
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+  padding: 1.5em 4em; }
+  @media screen and (min-width: 90em) {
+    #about-us-info .welcome, #menu-info li {
+      padding: 1.5em 3em; } }
+  @media screen and (min-width: 48em) and (max-width: 68em) {
+    #about-us-info .welcome, #menu-info li {
+      padding: 1.5em 2em; } }
+  @media screen and (min-width: 30em) and (max-width: 48em) {
+    #about-us-info .welcome, #menu-info li {
+      padding: 1.5em 1em; } }
+  @media screen and (max-width: 30em) {
+    #about-us-info .welcome, #menu-info li {
+      padding: 1.5em 1em; } }
+
+#about-us-info .welcome > i, #menu-info li > i {
+  color: #472e13;
+  font-size: 2em;
+  margin-bottom: 0.375em; }
+#about-us-info .welcome h3, #menu-info li h3 {
+  margin-bottom: 0.75em; }
+#about-us-info .welcome p, #menu-info li p {
+  line-height: 1.5em; }
+
+#about-us-info .welcome > .header, #menu-info li .header {
+  position: relative; }
+  #about-us-info .welcome > .header:before, #menu-info li .header:before {
+    content: "";
+    height: 3px;
+    width: -webkit-calc(50% - 2.5em);
+    width: calc(50% - 2.5em);
+    background-color: #bfd33b;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-0.4em);
+    -moz-transform: translateY(-0.4em);
+    -ms-transform: translateY(-0.4em);
+    -o-transform: translateY(-0.4em);
+    transform: translateY(-0.4em);
+    left: 0; }
+  #about-us-info .welcome > .header:after, #menu-info li .header:after {
+    content: "";
+    height: 3px;
+    width: -webkit-calc(50% - 2.5em);
+    width: calc(50% - 2.5em);
+    background-color: #bfd33b;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-0.4em);
+    -moz-transform: translateY(-0.4em);
+    -ms-transform: translateY(-0.4em);
+    -o-transform: translateY(-0.4em);
+    transform: translateY(-0.4em);
+    right: 0; }
 
 html, body, #page {
   margin: 0;
@@ -643,6 +712,66 @@ html, body, #page {
   #index-contact li:last-child {
     margin-right: 0; }
 
+#about-us {
+  position: relative;
+  height: auto;
+  background-image: url("assets/images/Pic-Coffee-3.png"); }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+    #about-us {
+      background-image: url("assets/images/Pic-Coffee-32x.png");
+      background-size: 100% 100% cover; } }
+
+#about-us-info {
+  margin-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 6em;
+  position: relative; }
+  #about-us-info .title {
+    top: 4.5em;
+    position: fixed; }
+    #about-us-info .title.centered {
+      -webkit-transform: translateY(-50%) translateX(-50%);
+      -moz-transform: translateY(-50%) translateX(-50%);
+      -ms-transform: translateY(-50%) translateX(-50%);
+      -o-transform: translateY(-50%) translateX(-50%);
+      transform: translateY(-50%) translateX(-50%); }
+  #about-us-info #mission-statement {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%); }
+  #about-us-info .welcome {
+    position: relative;
+    width: 100%;
+    float: left;
+    display: block;
+    margin-right: 38.19821%;
+    width: 100%; }
+    #about-us-info .welcome:last-child {
+      margin-right: 0; }
+    #about-us-info .welcome .tab {
+      position: absolute;
+      width: 64px;
+      height: 96px;
+      top: -64px;
+      left: 50%;
+      margin-left: -32px;
+      font-size: 24px;
+      padding-top: 16px;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      transition: all 0.2s; }
+      #about-us-info .welcome .tab:hover {
+        margin-top: -32px; }
+    #about-us-info .welcome div {
+      max-width: 68em;
+      margin: 0 auto; }
+
 #menu {
   background-image: url("assets/images/Pic-Menu.png"); }
   @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
@@ -661,63 +790,9 @@ html, body, #page {
     max-width: 68em;
     margin: 0 auto; }
   #menu-info li {
-    text-align: center;
-    background-color: white;
-    padding: 1.5em 4em;
-    margin-bottom: 1.5em;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5); }
-    @media screen and (min-width: 90em) {
-      #menu-info li {
-        padding: 1.5em 3em; } }
-    @media screen and (min-width: 48em) and (max-width: 68em) {
-      #menu-info li {
-        padding: 1.5em 2em; } }
-    @media screen and (min-width: 30em) and (max-width: 48em) {
-      #menu-info li {
-        padding: 1.5em 1em; } }
-    @media screen and (max-width: 30em) {
-      #menu-info li {
-        padding: 1.5em 1em; } }
+    margin-bottom: 1.5em; }
     #menu-info li:last-child {
       margin-bottom: 0; }
-    #menu-info li .header {
-      position: relative; }
-      #menu-info li .header:before {
-        content: "";
-        height: 3px;
-        width: -webkit-calc(50% - 2.5em);
-        width: calc(50% - 2.5em);
-        background-color: #bfd33b;
-        position: absolute;
-        top: 50%;
-        -webkit-transform: translateY(-0.4em);
-        -moz-transform: translateY(-0.4em);
-        -ms-transform: translateY(-0.4em);
-        -o-transform: translateY(-0.4em);
-        transform: translateY(-0.4em);
-        left: 0; }
-      #menu-info li .header:after {
-        content: "";
-        height: 3px;
-        width: -webkit-calc(50% - 2.5em);
-        width: calc(50% - 2.5em);
-        background-color: #bfd33b;
-        position: absolute;
-        top: 50%;
-        -webkit-transform: translateY(-0.4em);
-        -moz-transform: translateY(-0.4em);
-        -ms-transform: translateY(-0.4em);
-        -o-transform: translateY(-0.4em);
-        transform: translateY(-0.4em);
-        right: 0; }
-    #menu-info li i {
-      color: #472e13;
-      font-size: 2em;
-      margin-bottom: 0.375em; }
-    #menu-info li h3 {
-      margin-bottom: 0.75em; }
-    #menu-info li p {
-      line-height: 1.5em; }
 
 #contact {
   background-image: url("assets/images/Pic-Coffee-2.png"); }
