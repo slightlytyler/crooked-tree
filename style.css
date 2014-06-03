@@ -46,7 +46,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "GothamBook";
   line-height: 1.25em;
   margin: 0;
-  text-rendering: optimizeLegibility; }
+  text-rendering: optimizeLegibility;
+  font-weight: normal; }
 
 h1 {
   font-size: 2.25em; }
@@ -330,6 +331,9 @@ html, body, #page {
     right: 300px;
     border-color: white;
     width: 4em; }
+    @media screen and (max-width: 30em) {
+      #drawer-menu.push {
+        right: calc(100% - 4em); } }
     #drawer-menu.push:before, #drawer-menu.push:after {
       width: 1.5em; }
     #drawer-menu.push:before {
@@ -357,58 +361,66 @@ html, body, #page {
   overflow-x: none;
   overflow-y: auto;
   background: rgba(191, 211, 59, 0.6); }
+  @media screen and (max-width: 30em) {
+    .sidr {
+      width: calc(100% - 4em); } }
   .sidr.displace {
     background-color: #bfd33b; }
 
 .sidr.right {
   left: auto;
   right: -300px; }
+  @media screen and (max-width: 30em) {
+    .sidr.right {
+      right: -calc(100% - 4em); } }
 
 .sidr.left {
   left: -300px;
   right: auto; }
+  @media screen and (max-width: 30em) {
+    .sidr.left {
+      left: -calc(100% - 4em); } }
 
-#drawer-nav .menu {
-  margin-top: 3em; }
+#drawer-nav {
+  text-align: center; }
   #drawer-nav .menu li {
     margin-top: 1.5em; }
+    @media screen and (max-width: 30em) {
+      #drawer-nav .menu li {
+        margin-top: 0.375em; } }
     #drawer-nav .menu li:first-child {
-      text-indent: -9999px;
-      white-space: nowrap;
-      position: relative;
-      margin-bottom: 2em; }
-      #drawer-nav .menu li:first-child:before {
-        text-indent: 0;
-        content: "\f015";
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 1.75em;
-        position: absolute;
-        top: 0;
-        left: 50%;
-        -webkit-transform: translateX(-50%);
-        -moz-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        -o-transform: translateX(-50%);
-        transform: translateX(-50%);
-        border-bottom: 2px solid rgba(235, 215, 193, 0.6);
-        padding: 0 2em .5em; }
+      display: none; }
+
+#drawer-home {
+  display: inline-block;
+  font-size: 1.75em;
+  color: #472e13;
+  border-bottom: 2px solid rgba(235, 215, 193, 0.6);
+  padding: 0 2em .5em;
+  margin-top: 0.75em; }
 
 #mailing-list {
   position: absolute;
   bottom: 7.5em;
   width: 100%; }
+  @media screen and (max-width: 30em) {
+    #mailing-list {
+      bottom: 4.5em; } }
   #mailing-list h1 {
     margin-bottom: 0.75em; }
-  #mailing-list input[name="email"] {
+  #mailing-list form {
     width: 75%;
+    margin: 0 auto;
+    position: relative; }
+  #mailing-list input[name="email"] {
     margin: 0 auto;
     border: none;
     border-radius: 0;
     padding-right: 2.2em; }
   #mailing-list button[type="submit"] {
     position: absolute;
+    padding: 0;
+    margin: 0;
     background-color: transparent;
     background-image: none;
     border: none;
@@ -416,12 +428,27 @@ html, body, #page {
     text-shadow: none;
     font-size: 2em;
     color: #472e13;
-    top: .975em;
-    right: .75em; }
+    top: .6em;
+    right: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%); }
 
 #drawer-contact {
   position: absolute;
-  bottom: 1.5em; }
+  bottom: 1.5em;
+  width: 100%; }
+  @media screen and (max-width: 30em) {
+    #drawer-contact {
+      bottom: 0.75em; } }
+  #drawer-contact a {
+    display: block;
+    margin: 0 auto; }
+    @media screen and (max-width: 30em) {
+      #drawer-contact a {
+        line-height: 1.125em; } }
 
 #index {
   max-width: 68em;
@@ -434,7 +461,6 @@ html, body, #page {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
   height: 100%; }
   #index:after {
     content: "";
@@ -444,13 +470,16 @@ html, body, #page {
     #index {
       background-image: url("assets/images/Pic-Coffee-12x.png");
       background-size: 100% 100% cover; } }
+  #index.fill {
+    height: auto; }
 
 #index-info {
   float: left;
   display: block;
   margin-right: 10.1484%;
   width: 26.56773%;
-  padding-left: 1.5em; }
+  padding-left: 1.5em;
+  margin-bottom: 3em; }
   #index-info:last-child {
     margin-right: 0; }
   @media screen and (min-width: 48em) and (max-width: 68em) {

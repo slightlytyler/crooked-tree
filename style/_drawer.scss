@@ -1,6 +1,7 @@
 // Drawer Nav
 
 $drawer-width: 300px;
+$mobile-drawer-width: calc(100% - 4em);
 
 // Hamburger
 
@@ -44,6 +45,11 @@ $drawer-width: 300px;
     right: $drawer-width;
     border-color: white;
     width: em(64);
+
+    @include media($x-small-media){
+      right: $mobile-drawer-width;
+    }
+
     &:before, &:after{
       width: em(24);
     }
@@ -63,15 +69,19 @@ $drawer-width: 300px;
 // Sidr styles
 
 .sidr {
-display: none;
-position: fixed;
-top: 0;
-height: 100%;
-z-index: 999999;
-width: $drawer-width;
-overflow-x: none;
-overflow-y: auto;
-background: $yellow-a;
+  display: none;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  z-index: 999999;
+  width: $drawer-width;
+  overflow-x: none;
+  overflow-y: auto;
+  background: $yellow-a;
+
+  @include media($x-small-media){
+    width: $mobile-drawer-width;
+  }
 
   &.displace{
     background-color: $yellow;
@@ -81,46 +91,48 @@ background: $yellow-a;
 .sidr.right {
 left: auto;
 right:-$drawer-width;
+
+  @include media($x-small-media){
+    right: -$mobile-drawer-width;
+  }
 }
 
 .sidr.left {
 left:-$drawer-width;
 right:auto;
+
+  @include media($x-small-media){
+    left: -$mobile-drawer-width;
+  }
 }
 
 #drawer-nav{
+  text-align: center;
+
   .menu{
-    margin-top: $base-line-height * 2;
 
     li{
       @extend %type-nav-link;
       margin-top: $base-line-height;
 
+      @include media($x-small-media){
+        margin-top: $base-line-height / 4;
+      }
+
       &:first-child{
-        text-indent: -9999px; 
-        white-space: nowrap;
-        position: relative;
-        margin-bottom: $base-line-height + .5em;
-
-        &:before{
-        text-indent: 0; 
-        content: "\f015";
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        font-size: em(28);
-
-        position: absolute;
-        top: 0;
-        left: 50%;
-        @include transform(translateX(-50%));
-
-        border-bottom: 2px solid $coffee-a;
-        padding: 0 2em .5em;
-        }
+        display: none;
       }
     }
   }
+}
+
+#drawer-home{
+  display: inline-block;
+  font-size: em(28);
+  color: $bean;
+  border-bottom: 2px solid $coffee-a;
+  padding: 0 2em .5em;
+  margin-top: $base-line-height / 2;
 }
 
 #mailing-list{
@@ -128,14 +140,23 @@ right:auto;
   bottom: $base-line-height * 5;
   width: 100%;
 
+  @include media($x-small-media){
+    bottom: $base-line-height * 3;
+  }
+
   h1{
     @extend %type-nav-link;
     margin-bottom: $base-line-height / 2;
   }
 
+  form{
+    width: 75%;
+    margin: 0 auto;
+    position: relative;
+  }
+
   input[name="email"]{
     @extend %type-contact-label;
-    width: 75%;
     margin: 0 auto;
     border: none;
     border-radius: 0;
@@ -144,6 +165,8 @@ right:auto;
 
   button[type="submit"]{
     position: absolute;
+    padding: 0;
+    margin: 0;
     background-color: transparent;
     background-image: none;
     border: none;
@@ -151,8 +174,9 @@ right:auto;
     text-shadow: none;
     font-size: 2em;
     color: $bean;
-    top: .975em;
-    right: .75em;
+    top: .6em;
+    right: 0;
+    @include transform(translateX(-50%) translateY(-50%));
   }
 }
 
@@ -160,4 +184,18 @@ right:auto;
   position: absolute;
   bottom: $base-line-height;
   @extend %type-nav-contact;
+  width: 100%;
+
+  @include media($x-small-media){
+    bottom: $base-line-height / 2;  
+  }
+
+  a{
+    display: block;
+    margin: 0 auto;
+
+    @include media($x-small-media){
+      line-height: $base-line-height * .75;
+    }
+  }
 }
