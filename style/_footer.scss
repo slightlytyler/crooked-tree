@@ -18,7 +18,6 @@ footer#footer{
     top: -$sawtooth-size;
     left: 0;
     background-image:
-    /* Top jagged */
     linear-gradient(
         135deg,
         rgba(255,255,255,0) 50%, rgba(255,255,255,1) 50%
@@ -115,7 +114,6 @@ footer#footer{
         top: 0;
         left: 0;
         border-radius: 40px;
-        @include retina-image(assets/images/Explore-Menu, 100% 100% cover, png, null, 2x, false);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;

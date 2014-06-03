@@ -4,7 +4,7 @@
  */
 ?>
 
-	<footer id="footer" role="contentinfo">
+	<footer id="footer" <?php if (is_home() || is_page('Contact')){ echo 'class="hide"'; } ?> role="contentinfo">
     <section class="header">
       <h1>COFFEE CATCH LINE</h1>
     </section>
@@ -19,7 +19,12 @@
         </ul>
       </section>
       <section id="explore">
-        <a>EXPLORE OUR MENU&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
+        <style type="text/css">
+          #explore a:after{
+            background-image: url("<?php bloginfo('template_directory'); ?>/assets/images/Explore-<?php if (is_page('Menu')){ echo 'Story'; } else{ echo 'Menu'; } ?>.png");
+          }
+        </style>
+        <a href="index.php?page_id=<?php if (is_page('Menu')){ echo '4'; } else{ echo '8'; } ?>">EXPLORE OUR <?php if (is_page('Menu')){ echo 'STORY'; } else{ echo 'MENU'; } ?>&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
       </section>
       <section id="get-in-touch">
         <h2>GET IN TOUCH</h2>
