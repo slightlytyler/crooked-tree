@@ -6,14 +6,7 @@
 }
 
 #contact-info{
-  @include span-columns(1 of 1);
-  padding: 0 1em;
-  margin: ($base-line-height * 3) auto $base-line-height;
-
-  h1{
-    @extend %type-sans-h1;
-    padding: .6em 0;
-  }
+  @extend %inner-page;
 
   h2{
     @extend %type-theme-h4;
@@ -21,10 +14,7 @@
   }
 
   .title{
-    background-color: $coffee-a;
-    width: 100%;
-    max-width: em(400);
-    margin: 0 auto ($base-line-height * 2);
+    @extend %page-title;
   }
 
   ul{
@@ -80,4 +70,3 @@
     }
   }
 }
-

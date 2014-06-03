@@ -1,8 +1,18 @@
 jQuery(document).ready(function() {
 
+    // Scroll to top on load
+
     jQuery(window).load(function() {
          $("html,body").animate({scrollTop: 0}, 0);
     });
+
+    // Load Skrollr
+
+    if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+        skrollr.init({
+            forceHeight: false
+        });
+    }
 
     // Disable scroll for when drawer opens
 

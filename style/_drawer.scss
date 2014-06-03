@@ -13,8 +13,7 @@ $mobile-drawer-width: calc(100% - 4em);
   @include size(em(78));
   background-color: white;
   border: em(24) solid $yellow;
-  @include transition (all .1971s);
-  @include transition-delay(.029s);
+  @include transition (all .2s);
 
   @include media($small-media){
     right: $base-line-height * .5;
@@ -34,8 +33,7 @@ $mobile-drawer-width: calc(100% - 4em);
     width: em(30);
     height: em(6);
     background-color: $yellow;
-    @include transition (all .1971s);
-    @include transition-delay(.029s);
+    @include transition (all .2s);
   }
 
    &:before{

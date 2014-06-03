@@ -16,7 +16,7 @@ get_header(); ?>
         <li>FRIDAY 6 A.M. - 12 A.M.</li>
         <li>SATURDAY 7 A.M. - 12 A.M.</li>
         <li>SUNDAY 8 A.M. - 9 P.M.</li>
-      <ul>
+      </ul>
     </section>
     <section id="index-contact">
       <a href="tel:2149531142" class="phone-number">214.953.1142</a>

@@ -6,6 +6,62 @@
 
 get_header(); ?>
 
-Menu yeaaa
+<div id="menu" class="outer-page" data-top="background-position:0px 0px;" data-bottom="background-position:0px -60px;"> 
+  <div id="menu-info" class="inner-page">
+    <section class="title">
+        <h1>MENU</h1>
+    </section>
+    <section id="tag-line">
+      <h2>Our menu, we hope, features and directs you towards how truly great coffee can be, when well prepared.</h2>
+    </section>
+    <ul>
+      <li>
+        <section class="header">
+          <i class="fa fa-coffee"></i>
+        </section>
+        <h3>BREWED COFFEE</h3>
+        <p>
+          We offer batch brewed as well as manually brewed coffee (Chemex, V60, Clever,
+          French Press, etc.) that rotates based on availability. We also make delicious cold brewed iced coffee.
+        </p>
+      </li>
+      <li>
+        <section class="header">
+          <i class="fa fa-coffee"></i>
+        </section>
+        <h3>ESPRESSO</h3>
+        <p>
+          We love espresso and we offer rotating single-origin coffees as espresso. Our espresso
+          + milk menu is inspired by Italian cafes, with beverages based on proportion rather than size. That 
+          means that, instead of having the "small, medium, large" distinctions, our espresso based drinks all 
+          have a uniform amount of espresso with increasing amounts of milk from Macchiato, to Cortado, to Cappuccino, 
+          to Latte.
+        </p>
+      </li>
+      <li>
+        <section class="header">
+          <i class="fa fa-coffee"></i>
+        </section>
+        <h3>NON-COFFEE</h3>
+        <p>
+          We believe there is a time a place for non-coffee beverages, as well. We offer
+          amazing loose leaf teas, chai lattes, Italian sodas, and season specialty beverages, such as hot chocolate, 
+          or fruit spritzers, if you are looking for something beyond coffee.
+        </p>
+      </li>
+      <li>
+        <section class="header">
+          <i class="fa fa-coffee"></i>
+        </section>
+        <h3>FOOD</h3>
+        <p>
+          We receive pastries daily from Empire Bakery and Zenzero Bakery that range from
+          croissants, to banana bread, to crumb cake, to bagels. We also have an awesome, house-created 
+          sandwich menu, made with only the finest ingredients.
+        </p>
+      </li>
+    </ul>
+  </div>
+</div>
 
 <?php get_footer(); ?>

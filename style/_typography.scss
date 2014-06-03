@@ -4,6 +4,14 @@
   font-family: $gotham;
   font-size: em(18);
   text-align: center;
+
+  @include media($small-media){
+    font-size: em(16);
+  }
+
+  @include media($x-small-media){
+    font-size: em(14);
+  }
 }
 
 %type-body-left{
@@ -22,9 +30,13 @@
   font-family: $typewriter;
   font-size: em(44);
   color: $yellow;
+
+  @include media($x-small-media){
+    font-size: em(36);
+  }
 }
 
-%type-theme-h2{
+%type-theme-h3{
   font-family: $typewriter;
   font-size: em(32);
   color: $bean;
