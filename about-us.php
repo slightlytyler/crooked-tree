@@ -15,9 +15,11 @@ get_header(); ?>
       <section id="mission-statement" data-0="margin-top: -13%; opacity: 1;" data-320="margin-top: -4%; opacity: 0;">
         <h2>People. Atmosphere. Coffee.</h2>
       </section>
-      <a href="#welcome"><div class="tab" data-0="top: -64px; background-color: rgba(255,255,255,1); color: rgba(191,211,59,1);" data-180="top: 0px; background-color: rgba(255,255,255,0); color: rgba(191,211,59,0);">
-        <i class="fa fa-chevron-down"></i>
-      </div></a>
+      <a href="#welcome">
+        <div class="tab" data-0="top: -64px; background-color: rgba(255,255,255,1); color: rgba(191,211,59,1);" data-180="top: 0px; background-color: rgba(255,255,255,0); color: rgba(191,211,59,0);">
+          <i class="fa fa-chevron-down"></i>
+        </div>
+      </a>
       <section class="header">
         <i class="fa fa-coffee"></i>
       </section>
@@ -51,6 +53,11 @@ get_header(); ?>
       </seciton>
     </section>
     <section id="mission" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -120px;">
+      <a href="#mission">
+        <div class="tab" data-bottom-top="top: -96px; background-color: rgba(255,255,255,1); color: rgba(191,211,59,1);" data--750-bottom-bottom="top: 64px; background-color: rgba(255,255,255,0); color: rgba(191,211,59,0);">
+          <i class="fa fa-chevron-down"></i>
+        </div>
+      </a>
       <section class="header">
         <h3>OUR MISSION</h3>
       </section>

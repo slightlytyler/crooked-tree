@@ -139,16 +139,23 @@ jQuery(document).ready(function() {
         }
     });
 
-    // About Us title center
+    // About desktop enhancements
+
+    var welcomeHeight = jQuery('#welcome').outerHeight();
+    var originsHeight = windowHeight - welcomeHeight;
 
     if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
-        jQuery('#about-us-info .title').css('top', windowHeight / 2);
-        jQuery('#about-us-info .title').css('left', windowWidth / 2);
-        jQuery('#about-us-info .title').addClass('centered');
+        jQuery('#about-us-info .title').css('top', windowHeight / 2); // v center title
+        jQuery('#about-us-info .title').css('left', windowWidth / 2); // h center title
+        jQuery('#about-us-info .title').addClass('centered'); // centered prop
+
+        jQuery('#origins').height(originsHeight); // Origins height
 
         jQuery(window).resize(function() {
-            jQuery('#about-us-info .title').css('top', windowHeight / 2);
-            jQuery('#about-us-info .title').css('left', windowWidth / 2);
+            jQuery('#about-us-info .title').css('top', windowHeight / 2); // v center title
+            jQuery('#about-us-info .title').css('left', windowWidth / 2); // h center title
+
+            jQuery('#origins').height(originsHeight); // Origins height
         });
     }
 
@@ -156,13 +163,10 @@ jQuery(document).ready(function() {
 
     jQuery('#about-us-info').css('margin-top', windowHeight);
 
-    // Pass Skrollr init. ! Make this last in the init stack. Any changes to the dom after this will need to be refreshed in skrollr. !
-
-    if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
-        skrollr = skrollr.init({
-            forceHeight: false
-        });
-    }
+    jQuery(window).resize(function() {
+        jQuery('#about-us-info').css('margin-top', windowHeight);
+    });
+    
 
     // Smooth hash navigation
 
@@ -172,5 +176,14 @@ jQuery(document).ready(function() {
         }, 700);
         return false;
     });
+   
+
+    // Pass Skrollr init. ! Make this last in the init stack. Any changes to the dom after this will need to be refreshed in skrollr. !
+
+    if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+        skrollr = skrollr.init({
+            forceHeight: false
+        });
+    }
 
 });

@@ -308,10 +308,10 @@ dl {
   font-size: 1.125em;
   text-align: center;
   line-height: 1.5em; }
-  @media screen and (min-width: 30em) and (max-width: 48em) {
+  @media (max-width: 68em) {
     #welcome p, #menu-info li p, #about-us-info p, #mission span {
       font-size: 1em; } }
-  @media screen and (max-width: 30em) {
+  @media (max-width: 48em) {
     #welcome p, #menu-info li p, #about-us-info p, #mission span {
       font-size: 0.875em; } }
 
@@ -442,7 +442,7 @@ footer#footer h2, footer#footer #explore {
   font-family: "GothamBook";
   font-size: 0.875em; }
 
-#index, #about-us, #menu, #contact, #origins, #mission {
+#index, #about-us, #menu, #contact, #origins, #mission:after {
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -788,7 +788,8 @@ html, body, #page {
 #about-us {
   position: relative;
   height: auto;
-  background-image: url("assets/images/Pic-Coffee-3.png"); }
+  background-image: url("assets/images/Pic-Coffee-3.png");
+  z-index: -2; }
   @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
     #about-us {
       background-image: url("assets/images/Pic-Coffee-32x.png");
@@ -825,30 +826,7 @@ html, body, #page {
       -ms-transform: translateY(-50%) translateX(-50%);
       -o-transform: translateY(-50%) translateX(-50%);
       transform: translateY(-50%) translateX(-50%); }
-  #about-us-info #mission-statement {
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    transform: translateX(-50%); }
-    @media (max-width: 30em) {
-      #about-us-info #mission-statement {
-        top: -60%; } }
-
-#welcome {
-  position: relative;
-  width: 100%;
-  float: left;
-  display: block;
-  margin-right: 38.19821%;
-  width: 100%; }
-  #welcome:last-child {
-    margin-right: 0; }
-  #welcome .tab {
+  #about-us-info .tab {
     position: absolute;
     width: 64px;
     height: 96px;
@@ -862,9 +840,36 @@ html, body, #page {
     transition: all 0.2s;
     cursor: pointer;
     background-color: white;
-    color: #bfd33b; }
-    #welcome .tab:hover {
+    color: #bfd33b;
+    text-align: center; }
+    #about-us-info .tab:hover {
       margin-top: -16px; }
+  #about-us-info #mission-statement {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%); }
+    @media (max-width: 68em) {
+      #about-us-info #mission-statement {
+        top: -10%; } }
+    @media (max-width: 30em) {
+      #about-us-info #mission-statement {
+        top: -60%; } }
+
+#welcome {
+  position: relative;
+  width: 100%;
+  float: left;
+  display: block;
+  margin-right: 38.19821%;
+  width: 100%; }
+  #welcome:last-child {
+    margin-right: 0; }
   #welcome > .header {
     max-width: 86em;
     margin: 0 auto; }
@@ -903,6 +908,30 @@ html, body, #page {
     margin: 3em 0 9em; }
     #origins .description:last-child {
       margin-right: 0; }
+    @media screen and (min-width: 90em) {
+      #origins .description {
+        float: left;
+        display: block;
+        margin-right: 7.42297%;
+        width: 73.14426%; }
+        #origins .description:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 48em) and (max-width: 68em) {
+      #origins .description {
+        float: left;
+        display: block;
+        margin-right: 10.1484%;
+        width: 63.28387%; }
+        #origins .description:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 30em) and (max-width: 48em) {
+      #origins .description {
+        float: left;
+        display: block;
+        margin-right: 7.42297%;
+        width: 73.14426%; }
+        #origins .description:last-child {
+          margin-right: 0; } }
     @media (max-width: 30em) {
       #origins .description {
         float: left;
@@ -939,27 +968,34 @@ html, body, #page {
     right: 0; }
 
 #mission {
-  z-index: 1;
-  background-image: url("assets/images/Mission.png");
   float: left;
   display: block;
   margin-right: 38.19821%;
   width: 100%;
-  position: relative;
-  padding-bottom: 6em; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
-    #mission {
-      background-image: url("assets/images/Mission2x.png");
-      background-size: cover; } }
+  padding-bottom: 6em;
+  position: relative; }
   #mission:last-child {
     margin-right: 0; }
+  #mission:after {
+    content: "";
+    z-index: -1;
+    background-image: url("assets/images/Mission.png");
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+      #mission:after {
+        background-image: url("assets/images/Mission2x.png");
+        background-size: cover; } }
   #mission ul {
     padding-top: 3em;
     max-width: 68em;
     margin: 0 auto; }
   #mission li {
     margin-bottom: 1.5em; }
-    @media (max-width: 30em) {
+    @media (max-width: 68em) {
       #mission li {
         margin: 0 1em 1.5em; } }
     #mission li:last-child {
@@ -968,7 +1004,7 @@ html, body, #page {
     display: table-cell;
     width: 50%;
     vertical-align: top; }
-    @media (max-width: 30em) {
+    @media (max-width: 48em) {
       #mission .description, #mission .imagery {
         float: left;
         display: block;
@@ -979,12 +1015,12 @@ html, body, #page {
           margin-right: 0; } }
   #mission .description {
     padding-right: 2em; }
-    @media (max-width: 30em) {
+    @media (max-width: 48em) {
       #mission .description.non-mobile {
         display: none; } }
     #mission .description.mobile {
       display: none; }
-      @media (max-width: 30em) {
+      @media (max-width: 48em) {
         #mission .description.mobile {
           display: block; } }
   #mission .imagery {
@@ -1013,7 +1049,7 @@ html, body, #page {
     border-top: 1em solid transparent;
     border-bottom: 1em solid transparent;
     border-right: 1em solid white; }
-  @media (max-width: 30em) {
+  @media (max-width: 48em) {
     #mission li.normal-orientation .description, #mission li.flip-flop .description {
       padding: 0;
       margin-bottom: 1.5em; } }
