@@ -35,9 +35,6 @@ footer#footer{
     background-repeat: repeat-x;
 
   }
-  @media (max-width: $medium-screen){
-    padding-bottom: $base-line-height * 2;
-  }
 
   &.hide{
     display:none;
@@ -55,6 +52,10 @@ footer#footer{
   .header{
     @include span-columns(1 of 1);
     text-align: center;
+
+    @media (max-width: $medium-screen){
+      margin-bottom: $base-line-height;
+    }
   }
 
   .option-row{
@@ -94,10 +95,6 @@ footer#footer{
       padding: .5em 1.4em;
       @include transition (all .2s);
       white-space: nowrap;
-
-      @media (max-width: $large-screen){
-        font-size: .8em;
-      }
 
       &:hover{
         color: transparent !important;
@@ -145,6 +142,16 @@ footer#footer{
       display: block;
       @extend %type-nav-contact;
     }
+
+    @media (max-width: $medium-screen){
+      h2{
+        display: none
+      }
+
+      ul{
+        margin: 0 0 ($base-line-height / 2);
+      }
+    }
   }
 }
 
@@ -156,4 +163,8 @@ footer#footer{
   vertical-align: text-bottom;
   margin-bottom: $base-line-height;
   margin-top: $base-line-height * 2;
+
+  @media (max-width: $medium-screen){
+    margin-top: $base-line-height / 2;
+  }
 }
