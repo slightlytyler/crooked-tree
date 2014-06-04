@@ -8,7 +8,7 @@ get_header(); ?>
 
 <div id="about-us" data-top="background-position:0px 0px;" data-bottom="background-position:0px -60px;"> 
   <div id="about-us-info">
-    <section class="title" data-0="margin-top: 0%; opacity: 1;" data-320="margin-top: 1%; opacity: 0;">
+    <section class="title" data-0="margin-top: 0%; opacity: 1;" data-320="margin-top: 12%; opacity: 0;">
         <h1>ABOUT US</h1>
     </section>
     <seciton class="welcome">
@@ -30,7 +30,7 @@ get_header(); ?>
         </p>
       </div>
     </seciton>
-    <section id="origins"  data-start="background-position:0px 60px;" data-end="background-position:0px -60px;">
+    <section id="origins" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -120px;">
       <seciton class="description">
         <h4>ORIGINS</h4>
         <p>
@@ -41,7 +41,10 @@ get_header(); ?>
           people, from our employees, to our customers, to the producers of our coffee.
         </p>
       </seciton>
-      <seciton id="founded" data-center="right: -200px;" data-top="right: 0;">
+      <seciton id="founded"
+      data-50-bottom-bottom="right: -200px;"
+      data-50-top-top="right: 0;" 
+      >
         <h5>FOUNDED</h5>
         <span>2008</span>
       </seciton>
@@ -52,7 +55,7 @@ get_header(); ?>
       </section>
       <ul>
         <li>
-          <section class="decription">
+          <section class="description">
              <h4>PEOPLE</h4>
               <p>
                 We aim to be a great place to work and to visit. At Crooked Tree, we hope that our
@@ -61,10 +64,12 @@ get_header(); ?>
                 of coffee. We hope that you feel at home and taken care of when you come to visit us.
               </p>
             </section>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-1.png">
+            <section class="imagery">
+              <img src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-1.png">
+            </section>
         </li>
         <li>
-          <section class="decription">
+          <section class="description">
              <h4>ATMOSPHERE</h4>
               <p>
                 Our atmosphere stands out, as it is eclectic and comfortable. Sometimes we like to say
@@ -73,37 +78,40 @@ get_header(); ?>
                 have your drink more quickly over a brief chat, we have a standing bar at our espresso machine.
               </p>
             </section>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-2.png">
+            <section class="imagery">
+              <img src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-2.png">
+            </section>
         </li>
+        <li class="product">
           <section class="header">
             <h4>PRODUCT</h4>
-            <span>We are committed to consistently making quality beverages and food.</span>
-            <section class="focus">
-              <i class="fa fa-coffee"></i>
-              <p>
-                Our coffee is
-                locally roasted by Oak Cliff Coffee Roasters, where they buy directly from farmers to ensure 
-                quality of taste and economic responsibility.
-              </p>
-            </section>
-            <section class="focus">
-              <i class="fa fa-coffee"></i>
-              <p>
-                On our end, we are committed to brewing and
-                training standards that facilitate the best tasting coffee possible. We also source amazing 
-                loose leaf teas from a local company called Zakti.
-              </p>
-            </section>
-            <section class="focus">
-              <i class="fa fa-coffee"></i>
-              <p>
-                Regarding food, our pastries come from local
-                bakeries, such as Empire and Zenzero, and our sandwich menu is made of delightful, house 
-                recipes.
-              </p>
-            </section>
           </section>
-        <li>
+          <span>We are committed to consistently making quality beverages and food.</span>
+          <section class="focus coffee">
+            <i class="fa fa-coffee"></i>
+            <p>
+              Our coffee is
+              locally roasted by Oak Cliff Coffee Roasters, where they buy directly from farmers to ensure 
+              quality of taste and economic responsibility.
+            </p>
+          </section>
+          <section class="focus brew">
+            <i class="fa fa-coffee"></i>
+            <p>
+              On our end, we are committed to brewing and
+              training standards that facilitate the best tasting coffee possible. We also source amazing 
+              loose leaf teas from a local company called Zakti.
+            </p>
+          </section>
+          <section class="focus food">
+            <i class="fa fa-coffee"></i>
+            <p>
+              Regarding food, our pastries come from local
+              bakeries, such as Empire and Zenzero, and our sandwich menu is made of delightful, house 
+              recipes.
+            </p>
+          </section>
+        </li>
       </ul>
     </section>
   </div>

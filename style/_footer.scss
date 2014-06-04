@@ -1,5 +1,7 @@
 // Footer
 
+$sawtooth-size: 1.4em;
+
 footer#footer{
   @include outer-container;
   max-width: 100%;
@@ -7,8 +9,6 @@ footer#footer{
   position: relative;
 
   // Sawtooth
-
-  $sawtooth-size: 1.4em;
 
   &:before{
     content: "";

@@ -4,7 +4,7 @@
   @extend %full-page;
   position: relative;
   height: auto;
-  @include retina-image(assets/images/Pic-Coffee-3, 100% 100% cover, png, null, 2x, false);
+  @include retina-image(assets/images/Pic-Coffee-3, cover, png, null, 2x, false);
 }
 
 #about-us-info{
@@ -12,7 +12,6 @@
   margin-top: 0;
   padding-left: 0;
   padding-right: 0;
-  margin-bottom: $base-line-height * 4;
   position: relative;
 
   h2{
@@ -25,7 +24,7 @@
 
   h4{
     @extend %type-theme-h3;
-    margin-bottom: $base-line-height;
+    margin-bottom: $base-line-height / 3;
   }
 
   h5{
@@ -41,7 +40,7 @@
   .title{
     @extend %page-title;
     top: $base-line-height * 3;
-    position: fixed;
+    position: absolute;
 
     &.centered{
       @include transform(translateY(-50%) translateX(-50%));
@@ -74,7 +73,7 @@
       @include transition (all .2s);
 
       &:hover{
-        margin-top: -32px;
+        margin-top: -16px;
       }
     }
 
@@ -91,7 +90,7 @@
 
 #origins{
   @extend %full-page-image;
-  @include retina-image(assets/images/Origins, 100% 100% cover, png, null, 2x, false);
+  @include retina-image(assets/images/Origins, cover, png, null, 2x, false);
   @include span-columns(1 of 1);
   position: relative;
 
@@ -128,4 +127,91 @@
     bottom: -1.6em;
     right: 0;
   }
+}
+
+#mission{
+  @extend %full-page-image;
+  @include retina-image(assets/images/Mission, cover, png, null, 2x, false);
+  @include span-columns(1 of 1);
+  position: relative;
+  padding-bottom: $base-line-height * 4;
+
+  & > .header{
+    @extend %floating-div;
+  }
+
+  ul{
+    padding-top: $base-line-height * 2;
+    max-width: $large-screen;
+    margin: 0 auto;
+  }
+
+  li{
+    @extend %floating-div;
+    margin-bottom: $base-line-height;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  .description, .imagery{
+    @include span-columns(1 of 2, table);
+    vertical-align: top;
+  }
+
+  .description{
+    padding-right: 2em;
+  }
+
+  img{
+    width: 100%;
+    height: auto;
+  }
+
+  span{
+    @extend %type-body;
+    display: block;
+    margin-bottom: $base-line-height;
+  }
+
+  .product{
+    padding: $base-line-height 0;
+
+    h4{
+      border: none;
+    }
+
+    i{
+      color: $bean;
+      font-size: em(64);
+      margin-bottom: $base-line-height / 4;
+    }
+
+    .header{
+      @extend %picto-header;
+      margin: 0 4em;
+
+      &:before, &:after{
+        @include calc(width, "50% - 6.5em");
+      }
+    }
+
+    .focus{
+      @include span-columns(1 of 3, table);
+      border-right: 2px solid $yellow;
+      padding: 0 1em;
+
+      &.food{
+        border: none;
+      }
+    }
+    p{
+      @extend %type-product;
+      text-indent: 0;
+      text-align: center;
+      line-height: $base-line-height * 1.5;
+    }
+  }
+
 }

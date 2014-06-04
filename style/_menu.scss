@@ -2,7 +2,7 @@
 
 #menu{
   @extend %full-page;
-  @include retina-image(assets/images/Pic-Menu, 100% 100% cover, png, null, 2x, false);
+  @include retina-image(assets/images/Pic-Menu, cover, png, null, 2x, false);
 }
 
 #menu-info{

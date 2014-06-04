@@ -17,14 +17,6 @@ jQuery(document).ready(function() {
          $("html,body").animate({scrollTop: 0}, 0);
     });
 
-    // Load Skrollr
-
-    if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
-        skrollr.init({
-            forceHeight: false
-        });
-    }
-
     // Disable scroll for when drawer opens
 
     var mobileScrollDisable = false; // default
@@ -132,7 +124,7 @@ jQuery(document).ready(function() {
 
     }, false);
 
-    // Index height fix
+    // Page height fix
 
     if ( innerHeight < windowHeight ){
         jQuery('.outer-page').addClass('fill');
@@ -160,6 +152,14 @@ jQuery(document).ready(function() {
 
     // About us welcome push
 
-    jQuery('#about-us-info').css('padding-top', windowHeight);
+    jQuery('#about-us-info').css('margin-top', windowHeight);
+
+    // Pass Skrollr init. ! Make this last in the init stack. Any changes to the dom after this will need to be refreshed in skrollr. !
+
+    if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+        skrollr = skrollr.init({
+            forceHeight: false
+        });
+    }
 
 });
