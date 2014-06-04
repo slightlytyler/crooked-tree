@@ -141,14 +141,16 @@ jQuery(document).ready(function() {
 
     // About Us title center
 
-    jQuery('#about-us-info .title').css('top', windowHeight / 2);
-    jQuery('#about-us-info .title').css('left', windowWidth / 2);
-    jQuery('#about-us-info .title').addClass('centered');
-
-    jQuery(window).resize(function() {
+    if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
         jQuery('#about-us-info .title').css('top', windowHeight / 2);
         jQuery('#about-us-info .title').css('left', windowWidth / 2);
-    });
+        jQuery('#about-us-info .title').addClass('centered');
+
+        jQuery(window).resize(function() {
+            jQuery('#about-us-info .title').css('top', windowHeight / 2);
+            jQuery('#about-us-info .title').css('left', windowWidth / 2);
+        });
+    }
 
     // About us welcome push
 
@@ -161,5 +163,14 @@ jQuery(document).ready(function() {
             forceHeight: false
         });
     }
+
+    // Smooth hash navigation
+
+    jQuery('a').click(function(){
+        jQuery('html, body').animate({
+            scrollTop: $( $.attr(this, 'href') ).offset().top
+        }, 700);
+        return false;
+    });
 
 });

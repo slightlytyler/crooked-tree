@@ -5,7 +5,7 @@ $sawtooth-size: 1.4em;
 footer#footer{
   @include outer-container;
   max-width: 100%;
-  padding: $base-line-height 1em ($base-line-height * 3);
+  padding: $base-line-height 1em 0;
   position: relative;
 
   // Sawtooth
@@ -44,7 +44,6 @@ footer#footer{
 
   h1{
     @extend %type-theme-h2;
-    margin-bottom: $base-line-height / 2;
   }
 
   h2{
@@ -130,7 +129,15 @@ footer#footer{
     ul{
       color: $yellow;
       font-size: em(32);
-      margin: $base-line-height 0 ($base-line-height / 2);
+      margin: $base-line-height 0;
+
+      a{
+        margin-right: 1em;
+
+        &:last-child{
+          margin-right: 0;
+        }
+      }
     }
 
     & > a{
@@ -138,4 +145,14 @@ footer#footer{
       @extend %type-nav-contact;
     }
   }
+}
+
+#copyright{
+  font-weight: bold;
+  @include reset-display;
+  @extend %type-nav-contact;
+  width: 100%;
+  vertical-align: text-bottom;
+  margin-bottom: $base-line-height;
+  margin-top: $base-line-height * 2;
 }

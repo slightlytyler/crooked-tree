@@ -11,13 +11,13 @@ get_header(); ?>
     <section class="title" data-0="margin-top: 0%; opacity: 1;" data-320="margin-top: 12%; opacity: 0;">
         <h1>ABOUT US</h1>
     </section>
-    <seciton class="welcome">
+    <seciton id="welcome">
       <section id="mission-statement" data-0="margin-top: -13%; opacity: 1;" data-320="margin-top: -4%; opacity: 0;">
         <h2>People. Atmosphere. Coffee.</h2>
       </section>
-      <div class="tab" data-0="top: -64px; background-color: rgba(255,255,255,1); color: rgba(191,211,59,1);" data-180="top: 0px; background-color: rgba(255,255,255,0); color: rgba(191,211,59,0);">
+      <a href="#welcome"><div class="tab" data-0="top: -64px; background-color: rgba(255,255,255,1); color: rgba(191,211,59,1);" data-180="top: 0px; background-color: rgba(255,255,255,0); color: rgba(191,211,59,0);">
         <i class="fa fa-chevron-down"></i>
-      </div>
+      </div></a>
       <section class="header">
         <i class="fa fa-coffee"></i>
       </section>
@@ -42,19 +42,20 @@ get_header(); ?>
         </p>
       </seciton>
       <seciton id="founded"
-      data-50-bottom-bottom="right: -200px;"
-      data-50-top-top="right: 0;" 
+      data-anchor-target="#welcome"
+      data-300-top-top="right: -240px;"
+      data-top-top="right: 0;"
       >
         <h5>FOUNDED</h5>
         <span>2008</span>
       </seciton>
     </section>
-    <section id="mission">
+    <section id="mission" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -120px;">
       <section class="header">
         <h3>OUR MISSION</h3>
       </section>
       <ul>
-        <li>
+        <li class="normal-orientation">
           <section class="description">
              <h4>PEOPLE</h4>
               <p>
@@ -68,9 +69,9 @@ get_header(); ?>
               <img src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-1.png">
             </section>
         </li>
-        <li>
-          <section class="description">
-             <h4>ATMOSPHERE</h4>
+        <li class="flip-flop">
+            <section class="description mobile">
+              <h4>ATMOSPHERE</h4>
               <p>
                 Our atmosphere stands out, as it is eclectic and comfortable. Sometimes we like to say
                 that we have a living room feel. In addition to our warmly colored walls, we have a variety of 
@@ -81,6 +82,15 @@ get_header(); ?>
             <section class="imagery">
               <img src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-2.png">
             </section>
+            <section class="description non-mobile">
+              <h4>ATMOSPHERE</h4>
+              <p>
+                Our atmosphere stands out, as it is eclectic and comfortable. Sometimes we like to say
+                that we have a living room feel. In addition to our warmly colored walls, we have a variety of 
+                seating from couches, to tables both big and small, to a back patio, or, should you choose to 
+                have your drink more quickly over a brief chat, we have a standing bar at our espresso machine.
+              </p>
+          </section>
         </li>
         <li class="product">
           <section class="header">

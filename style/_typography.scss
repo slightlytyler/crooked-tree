@@ -55,6 +55,14 @@
   font-size: em(32);
   color: $bean;
   border-bottom: 2px solid $yellow;
+
+   @include media($small-media){
+    font-size: em(28);
+  }
+
+  @include media($x-small-media){
+    font-size: em(18);
+  }
 }
 
 %type-theme-h4{
