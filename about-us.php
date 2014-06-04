@@ -30,17 +30,18 @@ get_header(); ?>
         </p>
       </div>
     </seciton>
-    <section id="origins">
-      <seciton class="decription">
+    <section id="origins"  data-start="background-position:0px 60px;" data-end="background-position:0px -60px;">
+      <seciton class="description">
         <h4>ORIGINS</h4>
         <p>
           Crooked Tree Coffeehouse is as a dream of our owners Kristyn Bartley and Sarah Momary.
           Having backgrounds at indie shops, they desire to create a place that is people forward and 
-          economically responsible. They feel that the coffeehouse provides a unique opportunity to feature 
+          economically responsible.</p><br> 
+          <p>They feel that the coffeehouse provides a unique opportunity to feature 
           people, from our employees, to our customers, to the producers of our coffee.
         </p>
       </seciton>
-      <seciton id="founded">
+      <seciton id="founded" data-center="right: -200px;" data-top="right: 0;">
         <h5>FOUNDED</h5>
         <span>2008</span>
       </seciton>

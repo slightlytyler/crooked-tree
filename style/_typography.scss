@@ -4,6 +4,7 @@
   font-family: $gotham;
   font-size: em(18);
   text-align: center;
+  line-height: $base-line-height;
 
   @include media($small-media){
     font-size: em(16);
@@ -49,9 +50,11 @@
 }
 
 %type-theme-h3{
+  display: inline-block;
   font-family: $typewriter;
   font-size: em(32);
   color: $bean;
+  border-bottom: 2px solid $yellow;
 }
 
 %type-theme-h4{
@@ -148,6 +151,7 @@
   font-family: $nove-medium;
   font-size: em(52);
   color: $yellow;
+  text-shadow: 2px 2px 0px $bean;
 }
 
 %type-product{

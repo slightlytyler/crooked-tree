@@ -265,15 +265,16 @@ dl {
   src: url("assets/fonts/novecentowidelight.eot"), url("assets/fonts/novecentowidelight.ttf") format("truetype"), url("assets/fonts/novecentowidelight.svg#novecentowidelight") format("svg");
   font-weight: normal;
   font-style: normal; }
-#about-us-info .welcome p, #menu-info li p {
+#about-us-info .welcome p, #menu-info li p, #about-us-info p {
   font-family: "GothamBook";
   font-size: 1.125em;
-  text-align: center; }
+  text-align: center;
+  line-height: 1.5em; }
   @media screen and (min-width: 30em) and (max-width: 48em) {
-    #about-us-info .welcome p, #menu-info li p {
+    #about-us-info .welcome p, #menu-info li p, #about-us-info p {
       font-size: 1em; } }
   @media screen and (max-width: 30em) {
-    #about-us-info .welcome p, #menu-info li p {
+    #about-us-info .welcome p, #menu-info li p, #about-us-info p {
       font-size: 0.875em; } }
 
 #menu-info h2, #contact-info h2, #about-us-info h2 {
@@ -298,6 +299,13 @@ dl {
   @media screen and (max-width: 30em) {
     #about-us-info h3, #menu-info h3, footer#footer h1 {
       font-size: 2.25em; } }
+
+#about-us-info h4 {
+  display: inline-block;
+  font-family: "AmericanTypewriter";
+  font-size: 2em;
+  color: #472e13;
+  border-bottom: 2px solid #bfd33b; }
 
 #menu-info h2, #contact-info h2 {
   font-size: 2em;
@@ -327,16 +335,16 @@ dl {
   font-size: 1.75em;
   font-weight: normal; }
 
-#about-us-info .title h1, #menu-info .title h1, #contact-info .title h1 {
+#about-us-info .title h1, #menu-info .title h1, #contact-info .title h1, #founded span {
   font-family: "NoveLight";
   font-size: 2.75em;
   color: #472e13;
   text-align: center; }
   @media screen and (min-width: 30em) and (max-width: 48em) {
-    #about-us-info .title h1, #menu-info .title h1, #contact-info .title h1 {
+    #about-us-info .title h1, #menu-info .title h1, #contact-info .title h1, #founded span {
       font-size: 2.5em; } }
   @media screen and (max-width: 30em) {
-    #about-us-info .title h1, #menu-info .title h1, #contact-info .title h1 {
+    #about-us-info .title h1, #menu-info .title h1, #contact-info .title h1, #founded span {
       font-size: 2.25em; } }
 
 footer#footer h2, footer#footer #explore {
@@ -367,7 +375,13 @@ footer#footer h2, footer#footer #explore {
 #index-contact .phone-number {
   font-size: 1.375em; }
 
-#index, #about-us, #menu, #contact {
+#about-us-info h5 {
+  font-family: "NoveMedium";
+  font-size: 3.25em;
+  color: #bfd33b;
+  text-shadow: 2px 2px 0px #472e13; }
+
+#index, #about-us, #menu, #contact, #origins {
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -727,6 +741,11 @@ html, body, #page {
   padding-right: 0;
   margin-bottom: 6em;
   position: relative; }
+  #about-us-info h4 {
+    margin-bottom: 1.5em; }
+  #about-us-info p {
+    text-align: left;
+    text-indent: 1em; }
   #about-us-info .title {
     top: 4.5em;
     position: fixed; }
@@ -771,6 +790,51 @@ html, body, #page {
     #about-us-info .welcome div {
       max-width: 68em;
       margin: 0 auto; }
+
+#origins {
+  background-image: url("assets/images/Origins.png");
+  float: left;
+  display: block;
+  margin-right: 38.19821%;
+  width: 100%;
+  position: relative; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+    #origins {
+      background-image: url("assets/images/Origins2x.png");
+      background-size: 100% 100% cover; } }
+  #origins:last-child {
+    margin-right: 0; }
+  #origins .description {
+    float: left;
+    display: block;
+    margin-right: 16.03631%;
+    width: 41.98184%;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 1.5em 1em;
+    text-align: center;
+    margin: 3em 0 9em; }
+    #origins .description:last-child {
+      margin-right: 0; }
+
+#founded {
+  position: absolute;
+  right: 0;
+  bottom: 3em;
+  height: 0;
+  width: 100%;
+  max-width: 280px;
+  border-bottom: 85px solid rgba(255, 255, 255, 0.6);
+  border-left: 65px solid transparent;
+  border-right: 15px solid rgba(255, 255, 255, 0.6);
+  padding-right: 20px; }
+  #founded h5 {
+    position: absolute;
+    right: 1.8em;
+    bottom: -.9em; }
+  #founded span {
+    position: absolute;
+    bottom: -1.6em;
+    right: 0; }
 
 #menu {
   background-image: url("assets/images/Pic-Menu.png"); }
