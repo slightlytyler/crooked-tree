@@ -12,6 +12,7 @@ footer#footer{
 
   &:before{
     content: "";
+    z-index: 3;
     position: absolute;
     width: 100%;
     height: $sawtooth-size;

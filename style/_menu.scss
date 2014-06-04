@@ -18,6 +18,12 @@
     @extend %type-theme-h2;
   }
 
+  i{
+    color: $bean;
+    font-size: em(44);
+    margin-top: -.3em;
+  }
+
   .title{
     @extend %page-title;
   }
@@ -41,7 +47,9 @@
     }
 
     .header{
-      @extend %picto-header
+      @extend %picto-header;
+      margin-top: .4em;
+      margin-bottom: $base-line-height / 2;
     }
 
     @extend %item-card;

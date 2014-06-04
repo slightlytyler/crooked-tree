@@ -45,7 +45,11 @@
   color: $yellow;
 
   @include media($x-small-media){
-    font-size: em(36);
+    font-size: em(32);
+  }
+
+  @include media($x-small-media){
+    font-size: em(28);
   }
 }
 

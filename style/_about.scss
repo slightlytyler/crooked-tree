@@ -36,6 +36,9 @@
     @extend %type-body;
     text-align: left;
     text-indent: 1em;
+    @media (max-width: $small-screen){
+      text-align: center;
+    }
   }
 
   .title{
@@ -97,6 +100,11 @@
     @extend %picto-header;
     max-width: 86em;
     margin: 0 auto;
+
+    i{
+      color: $bean;
+      font-size: 2em;
+    }
   }
 
   div{
@@ -293,14 +301,26 @@
     .header{
       @extend %picto-header;
       margin: 0 4em;
+      @media (max-width: $small-screen){
+        margin: 0;
+      }
 
       &:before, &:after{
         @include calc(width, "50% - 6.5em");
+
+        @media (max-width: $small-screen){
+          @include calc(width, "50% - 3.5em");
+        }
       }
     }
 
     span{
       margin: 0 auto ($base-line-height * 1.5);
+
+      @media (max-width: $small-screen){
+        padding-bottom: $base-line-height;
+        border-bottom: 2px solid $yellow;
+      }
     }
 
     .focus{
@@ -314,7 +334,12 @@
         float: none;
         border-right: none;
         border-bottom: 2px solid $yellow;
+        padding-bottom: $base-line-height;
         margin-bottom: $base-line-height;
+
+        &:last-child{
+          margin-bottom: 0;
+        }
      }
 
       &.food{
@@ -326,6 +351,7 @@
       text-indent: 0;
       text-align: center;
       line-height: $base-line-height * 1.5;
+      margin-bottom: 0;
     }
   }
 

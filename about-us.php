@@ -98,7 +98,7 @@ get_header(); ?>
           </section>
           <span>We are committed to consistently making quality beverages and food.</span>
           <section class="focus coffee">
-            <i class="fa fa-coffee"></i>
+            <i class="icomoon icomoon-bean"></i>
             <p>
               Our coffee is
               locally roasted by Oak Cliff Coffee Roasters, where they buy directly from farmers to ensure 
@@ -106,7 +106,7 @@ get_header(); ?>
             </p>
           </section>
           <section class="focus brew">
-            <i class="fa fa-coffee"></i>
+            <i class="icomoon icomoon-tea"></i>
             <p>
               On our end, we are committed to brewing and
               training standards that facilitate the best tasting coffee possible. We also source amazing 
@@ -114,7 +114,7 @@ get_header(); ?>
             </p>
           </section>
           <section class="focus food">
-            <i class="fa fa-coffee"></i>
+            <i class="icomoon icomoon-cupcake"></i>
             <p>
               Regarding food, our pastries come from local
               bakeries, such as Empire and Zenzero, and our sandwich menu is made of delightful, house 

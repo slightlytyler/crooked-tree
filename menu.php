@@ -6,7 +6,7 @@
 
 get_header(); ?>
 
-<div id="menu" class="outer-page" data-top="background-position:0px 0px;" data-bottom="background-position:0px -60px;"> 
+<div id="menu" class="outer-page" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -60px;"> 
   <div id="menu-info" class="inner-page">
     <section class="title">
         <h1>MENU</h1>
@@ -17,7 +17,7 @@ get_header(); ?>
     <ul>
       <li>
         <section class="header">
-          <i class="fa fa-coffee"></i>
+          <i class="icomoon icomoon-coffee"></i>
         </section>
         <h3>BREWED COFFEE</h3>
         <p>
@@ -27,7 +27,7 @@ get_header(); ?>
       </li>
       <li>
         <section class="header">
-          <i class="fa fa-coffee"></i>
+          <i class="icomoon icomoon-espresso"></i>
         </section>
         <h3>ESPRESSO</h3>
         <p>
@@ -40,7 +40,7 @@ get_header(); ?>
       </li>
       <li>
         <section class="header">
-          <i class="fa fa-coffee"></i>
+          <i class="icomoon icomoon-bottle"></i>
         </section>
         <h3>NON-COFFEE</h3>
         <p>
@@ -51,7 +51,7 @@ get_header(); ?>
       </li>
       <li>
         <section class="header">
-          <i class="fa fa-coffee"></i>
+          <i class="icomoon icomoon-cupcake-inverse"></i>
         </section>
         <h3>FOOD</h3>
         <p>
