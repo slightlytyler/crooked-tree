@@ -45,6 +45,7 @@
       © <?php echo date("Y"); ?> Crooked Tree Coffee House
     </section>
 	</footer>
+  </div>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

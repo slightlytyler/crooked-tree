@@ -41,4 +41,4 @@
         <a href="mailto:info@crookedtreecoffeehouse.com">info@crookedtreecoffeehouse.com</a>
       </section>
     </div>
-    
+    <div id="content">

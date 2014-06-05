@@ -115,16 +115,14 @@
 
 // Global
 
-html, body, #page{
+html, body, #page, #content{
   margin: 0;
   width:100%;
   height:100%;
 }
 
-#skrollr-body {
-  height: 100%;
-  position: relative;
-  width: 100%;
+#page{
+  background-color: $coffee;
 }
 // Nav
 
@@ -141,3 +139,7 @@ html, body, #page{
 // Footer
 
 @import "footer";
+
+// Loading Screen
+
+@import "loading";

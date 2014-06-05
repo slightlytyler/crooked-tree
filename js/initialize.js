@@ -1,91 +1,21 @@
+ // Some vars
+
+var innerHeight = jQuery('.inner-page').outerHeight(true);
+var windowHeight = jQuery(window).height();
+var windowWidth = jQuery(window).width();
+var welcomeHeight = jQuery('#welcome').outerHeight();
+var originsHeight = windowHeight - welcomeHeight;
+var originsInnerHeight = jQuery('#origins .description').outerHeight(true);
+var mobileScrollDisable = false; // default
+
+
+
+jQuery(window).resize(function() {
+    windowHeight = jQuery(window).height()
+    windowWidth = jQuery(window).width();
+});
+
 jQuery(document).ready(function() {
-
-    // Some vars
-
-    var innerHeight = jQuery('.inner-page').outerHeight(true);
-    var windowHeight = jQuery(window).height();
-    var windowWidth = jQuery(window).width();
-
-    jQuery(window).resize(function() {
-        windowHeight = jQuery(window).height()
-        windowWidth = jQuery(window).width();
-    });
-
-    // Scroll to top on load
-
-    jQuery(window).load(function() {
-         $("html,body").animate({scrollTop: 0}, 0);
-    });
-
-    // Disable scroll for when drawer opens
-
-    var mobileScrollDisable = false; // default
-
-    function disableScroll(){
-        var scrollPosition = [
-        self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
-        self.pageYOffset || document.documentElement.scrollTop  || document.body.scrollTop
-        ];
-        var html = jQuery('html'); // it would make more sense to apply this to body, but IE7 won't have that
-        html.data('scroll-position', scrollPosition);
-        html.data('previous-overflow', html.css('overflow'));
-        html.css('overflow', 'hidden');
-        window.scrollTo(scrollPosition[0], scrollPosition[1]);
-        mobileScrollDisable = true;
-    }
-
-    function enableScroll(){
-        var html = jQuery('html');
-        var scrollPosition = html.data('scroll-position');
-        html.css('overflow', html.data('previous-overflow'));
-        window.scrollTo(scrollPosition[0], scrollPosition[1])
-        mobileScrollDisable = false;
-    }
-
-    // Sidr Inits
-
-    function sidrInit(){
-        jQuery('#drawer-menu').sidr({
-            side: 'right',
-            displace: false,
-            onOpen: function(drawerMenuPush) {
-                jQuery("#drawer-menu").addClass('push');
-                disableScroll();
-            },
-            onClose: function(drawerMenuPush) {
-                jQuery("#drawer-menu").removeClass('push');
-                enableScroll();
-            }
-        });
-
-        jQuery(".sidr").removeClass('displace');
-    }
-
-    function sidrMobileInit(){
-        jQuery('#drawer-menu').sidr({
-            side: 'right',
-            displace: true,
-            onOpen: function(drawerMenuPush) {
-                jQuery("#drawer-menu").addClass('push');
-                disableScroll();
-            },
-            onClose: function(drawerMenuPush) {
-                jQuery("#drawer-menu").removeClass('push');
-                enableScroll();
-            }
-        });
-
-        jQuery(".sidr").addClass('displace');
-    }
-
-    function sidrSelect(){
-        if (jQuery(window).width() > 640) {
-           sidrInit()
-        }
-        else {
-           sidrMobileInit();
-        }
-    }
 
     sidrSelect()
 
@@ -124,26 +54,22 @@ jQuery(document).ready(function() {
 
     }, false);
 
-    // Page height fix
+    pageInit();
 
-    if ( innerHeight < windowHeight ){
-        jQuery('.outer-page').addClass('fill');
-    }
+    setSkrollr();
+   
+});
 
-    jQuery(window).resize(function() {
-        if (innerHeight < outerHeight){
-            jQuery('.outer-page').addClass('fill');
-        }
-        else {
-            jQuery('.outer-page').removeClass('fill');
-        }
-    });
+ function pageInit(){
+
+    innerHeight = jQuery('.inner-page').outerHeight(true);
+    windowHeight = jQuery(window).height();
+    windowWidth = jQuery(window).width();
+    welcomeHeight = jQuery('#welcome').outerHeight();
+    originsHeight = windowHeight - welcomeHeight;
+    originsInnerHeight = jQuery('#origins .description').outerHeight(true);
 
     // About desktop enhancements
-
-    var welcomeHeight = jQuery('#welcome').outerHeight();
-    var originsHeight = windowHeight - welcomeHeight;
-    var originsInnerHeight = jQuery('#origins .description').outerHeight()
 
     if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
         jQuery('#about-us-info .title').css('top', windowHeight / 2); // v center title
@@ -172,7 +98,21 @@ jQuery(document).ready(function() {
     jQuery(window).resize(function() {
         jQuery('#about-us-info').css('margin-top', windowHeight);
     });
-    
+
+    // Page height fix
+
+    if ( innerHeight < windowHeight ){
+        jQuery('.outer-page').addClass('fill');
+    }
+
+    jQuery(window).resize(function() {
+        if (innerHeight < windowHeight){
+            jQuery('.outer-page').addClass('fill');
+        }
+        else {
+            jQuery('.outer-page').removeClass('fill');
+        }
+    });
 
     // Smooth hash navigation
 
@@ -182,8 +122,54 @@ jQuery(document).ready(function() {
         }, 700);
         return false;
     });
-   
+ }
 
+ // Sidr Inits
+
+function sidrInit(){
+    jQuery('#drawer-menu').sidr({
+        side: 'right',
+        displace: false,
+        onOpen: function(drawerMenuPush) {
+            jQuery("#drawer-menu").addClass('push');
+            disableScroll();
+        },
+        onClose: function(drawerMenuPush) {
+            jQuery("#drawer-menu").removeClass('push');
+            enableScroll();
+        }
+    });
+
+    jQuery(".sidr").removeClass('displace');
+}
+
+function sidrMobileInit(){
+    jQuery('#drawer-menu').sidr({
+        side: 'right',
+        displace: true,
+        onOpen: function(drawerMenuPush) {
+            jQuery("#drawer-menu").addClass('push');
+            disableScroll();
+        },
+        onClose: function(drawerMenuPush) {
+            jQuery("#drawer-menu").removeClass('push');
+            enableScroll();
+        }
+    });
+
+    jQuery(".sidr").addClass('displace');
+}
+
+function sidrSelect(){
+    if (jQuery(window).width() > 640) {
+       sidrInit()
+    }
+    else {
+       sidrMobileInit();
+    }
+}
+
+function setSkrollr(){
     // Pass Skrollr init. ! Make this last in the init stack. Any changes to the dom after this will need to be refreshed in skrollr. !
 
     if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
@@ -191,5 +177,27 @@ jQuery(document).ready(function() {
             forceHeight: false
         });
     }
+}
 
-});
+// Disable scroll for when drawer opens
+
+function disableScroll(){
+    var scrollPosition = [
+    self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+    self.pageYOffset || document.documentElement.scrollTop  || document.body.scrollTop
+    ];
+    var html = jQuery('html'); // it would make more sense to apply this to body, but IE7 won't have that
+    html.data('scroll-position', scrollPosition);
+    html.data('previous-overflow', html.css('overflow'));
+    html.css('overflow', 'hidden');
+    window.scrollTo(scrollPosition[0], scrollPosition[1]);
+    mobileScrollDisable = true;
+}
+
+function enableScroll(){
+    var html = jQuery('html');
+    var scrollPosition = html.data('scroll-position');
+    html.css('overflow', html.data('previous-overflow'));
+    window.scrollTo(scrollPosition[0], scrollPosition[1])
+    mobileScrollDisable = false;
+}
