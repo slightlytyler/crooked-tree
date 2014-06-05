@@ -54,7 +54,7 @@ get_header(); ?>
     </section>
     <section id="mission" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -120px;">
       <a href="#mission">
-        <div class="tab" data-bottom-top="top: -96px; background-color: rgba(255,255,255,1); color: rgba(191,211,59,1);" data--750-bottom-bottom="top: 64px; background-color: rgba(255,255,255,0); color: rgba(191,211,59,0);">
+        <div class="tab" data-anchor-target="#welcome" data-top-top="top: -96px; background-color: rgba(255,255,255,1); color: rgba(191,211,59,1);" data-top-bottom="top: 0px; background-color: rgba(255,255,255,0); color: rgba(191,211,59,0);">
           <i class="fa fa-chevron-down"></i>
         </div>
       </a>
