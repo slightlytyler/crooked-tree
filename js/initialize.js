@@ -129,6 +129,10 @@ jQuery(document).ready(function() {
     jQuery('li.page_item, #drawer-home').click(function(){
         jQuery.sidr('close', 'sidr');
     });
+
+    // Set jQuery Picture
+
+    $('picture').picture();
  }
 
  // Scroll to top

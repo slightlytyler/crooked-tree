@@ -105,10 +105,13 @@ function crookedtree_scripts() {
 	wp_register_script( 'init', get_template_directory_uri() . '/js/initialize.js' , array( 'jquery' ), '1.0', true );
 	wp_register_script( 'sidr', get_template_directory_uri() . '/js/sidr.js' , array( 'jquery' ), '1.0', true );
 	wp_register_script( 'skrollr', get_template_directory_uri() . '/js/skrollr.js' , array( 'jquery' ), '1.0', true );
+	wp_register_script( 'jquery-picture', get_template_directory_uri() . '/js/jquery-picture.js' , array( 'jquery' ), '1.0', true );
+
 
 	wp_enqueue_script( 'init' );
 	wp_enqueue_script( 'sidr' );
 	wp_enqueue_script( 'skrollr' );
+	wp_enqueue_script( 'jquery-picture' );
 }
 add_action( 'wp_enqueue_scripts', 'crookedtree_scripts' );
 
