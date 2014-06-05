@@ -189,7 +189,7 @@ right:auto;
     color: $bean;
     top: .52em;
     right: 0;
-    @include transform(translateX(-50%) translateY(-50%));
+    @include transform(translate3D(-50%, -50%, 0));
   }
 }
 

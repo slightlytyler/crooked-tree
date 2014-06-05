@@ -117,7 +117,7 @@ jQuery(document).ready(function() {
 
     // Smooth hash navigation
 
-    jQuery('a').click(function(){
+    jQuery('a.hash-nav').click(function(){
         jQuery('html, body').animate({
             scrollTop: $( $.attr(this, 'href') ).offset().top
         }, 700);

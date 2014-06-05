@@ -2,7 +2,7 @@
 
 #index{
   @extend %full-page;
-  @include retina-image(assets/images/Pic-Coffee-1, 100% 100% cover, png, null, 2x, false);
+  @include retina-image(assets/images/Pic-Coffee-1, 100% 100% cover, jpg, null, -2x, false);
 }
 
 #index-info{

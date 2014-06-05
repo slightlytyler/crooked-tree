@@ -2,7 +2,7 @@
 
 #contact{
   @extend %full-page;
-  @include retina-image(assets/images/Pic-Coffee-2, 100% 100% cover, png, null, 2x, false);
+  @include retina-image(assets/images/Pic-Coffee-2, 100% 100% cover, jpg, null, -2x, false);
 }
 
 #contact-info{
@@ -35,14 +35,14 @@
       font-size: em(32);
       position: absolute;
       left: .6em;
-      @include transform(translateY(20%));
+      @include transform(translate3D(0, 20%, 0));
 
       @include media($small-media){
-        @include transform(translateY(30%));
+        @include transform(translate3D(0, 30%, 0));
       }
 
       @include media($x-small-media){
-        @include transform(translateY(60%));
+        @include transform(translate3D(0, 60%, 0));
         left: 1.2em;
       }
     }

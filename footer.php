@@ -23,7 +23,7 @@
       <section id="explore">
         <style type="text/css">
           #explore a:after{
-            background-image: url("<?php bloginfo('template_directory'); ?>/assets/images/Explore-<?php if (is_page('Menu')){ echo 'Story'; } else{ echo 'Menu'; } ?>.png");
+            background-image: url("<?php bloginfo('template_directory'); ?>/assets/images/Explore-<?php if (is_page('Menu')){ echo 'Story'; } else{ echo 'Menu'; } ?>.jpg");
           }
         </style>
         <a href="index.php?page_id=<?php if (is_page('Menu')){ echo '4'; } else{ echo '8'; } ?>">EXPLORE OUR <?php if (is_page('Menu')){ echo 'STORY'; } else{ echo 'MENU'; } ?>&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>

@@ -4,7 +4,7 @@
   @extend %full-page;
   position: relative;
   height: auto;
-  @include retina-image(assets/images/Pic-Coffee-3, cover, png, null, 2x, false);
+  @include retina-image(assets/images/Pic-Coffee-3, cover, jpg, null, -2x, false);
   z-index: 0;
 }
 
@@ -54,7 +54,7 @@
     }
 
     &.centered{
-      @include transform(translateY(-50%) translateX(-50%));
+      @include transform(translate3D(-50%, -50%, 0));
     }
   }
 
@@ -83,7 +83,7 @@
     position: absolute;
     width: 100%;
     left: 50%;
-    @include transform(translateX(-50%));
+    @include transform(translate3D(-50%, 0 ,0));
 
     @media (max-width: $large-screen){
       top: -10%;
@@ -121,9 +121,10 @@
 
 #origins{
   @extend %full-page-image;
-  @include retina-image(assets/images/Origins, cover, png, null, 2x, false);
+  @include retina-image(assets/images/Origins, cover, jpg, null, -2x, false);
   @include span-columns(1 of 1);
   position: relative;
+  overflow-x: hidden;
 
   @media (max-width: $small-screen){
     padding: 0 1em;
@@ -195,7 +196,7 @@
     content: "";
     @extend %full-page-image;
     z-index: -1;
-    @include retina-image(assets/images/Mission, cover, png, null, 2x, false);
+    @include retina-image(assets/images/Mission, cover, jpg, null, -2x, false);
     position: absolute;
     left: 0;
     right: 0;
@@ -216,7 +217,7 @@
     &:before, &:after{
       @include calc(width, "50% - 22em");
       margin: 0 10em;
-      @include transform(translateY(-75%));
+      @include transform(translate3D(0, -75%, 0));
 
       @include media($medium-media){
         @include calc(width, "50% - 19em");
@@ -289,7 +290,7 @@
     }
   }
 
-  .imagery{
+  .imagery section{
     position: relative;
 
     &:before{
@@ -306,7 +307,7 @@
   }
 
   li.normal-orientation{
-    .imagery:before{
+    .imagery section:before{
      left: 0;
       @include triangle(2em, white, right);
     }
@@ -317,7 +318,7 @@
       padding: 0 0 0 2em;
     }
 
-    .imagery:before{
+    .imagery section:before{
       right: 0;
       @include triangle(2em, white, left);
     }

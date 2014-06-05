@@ -97,7 +97,7 @@
       background-color: $yellow;
       position: absolute;
       top: 50%;
-      @include transform(translateY(-.4em));
+      @include transform(translate3D(0, -.4em, 0));
       left: 0; 
     }
 
@@ -108,9 +108,19 @@
       background-color: $yellow;
       position: absolute;
       top: 50%;
-      @include transform(translateY(-.4em));
+      @include transform(translate3D(0, -.4em, 0));
       right: 0; 
     }
+}
+
+%accelerate-flickr{
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+}
+
+%accelerate{
+  @extend %accelerate-flickr;
+  @include transform(translate3D(0,0,0));
 }
 
 // Global
@@ -124,6 +134,7 @@ html, body, #page, #content{
 html{
   background: hsl(31,51%,84%) url("assets/images/body-texture.png") 0 0 repeat;
 }
+
 // Nav
 
 @import "fallback-nav"; // for when js is disabled

@@ -15,7 +15,7 @@ get_header(); ?>
       <section id="mission-statement" data-0="margin-top: -13%; opacity: 1;" data-320="margin-top: -4%; opacity: 0;">
         <h2>People. Atmosphere. Coffee.</h2>
       </section>
-      <a href="#welcome">
+      <a href="#welcome" class="hash-nav">
         <div class="tab" data-0="top: -64px; background-color: rgba(255,255,255,1); color: rgba(191,211,59,1);" data-180="top: 0px; background-color: rgba(255,255,255,0); color: rgba(191,211,59,0);">
           <i class="fa fa-chevron-down"></i>
         </div>
@@ -55,8 +55,8 @@ get_header(); ?>
     <section id="mission">
       <section class="bg" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -120px;">
       </section>
-      <a href="#mission">
-        <div class="tab" data-anchor-target="#welcome" data-top-top="top: -96px; background-color: rgba(255,255,255,1); color: rgba(191,211,59,1);" data-top-bottom="top: 0px; background-color: rgba(255,255,255,0); color: rgba(191,211,59,0);">
+      <a href="#mission" class="hash-nav">
+        <div class="tab" data-anchor-target="#welcome" data-top-top="top: -64px; background-color: rgba(255,255,255,1); color: rgba(191,211,59,1);" data-top-bottom="top: 0px; background-color: rgba(255,255,255,0); color: rgba(191,211,59,0);">
           <i class="fa fa-chevron-down"></i>
         </div>
       </a>
@@ -75,7 +75,9 @@ get_header(); ?>
               </p>
             </section>
             <section class="imagery">
-              <img src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-1.png">
+              <section>
+                <img src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-1.jpg">
+              </section>
             </section>
         </li>
         <li class="flip-flop">
@@ -89,7 +91,9 @@ get_header(); ?>
               </p>
             </section>
             <section class="imagery">
-              <img src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-2.png">
+              <section>
+                <img src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-2.jpg">
+              </section>
             </section>
             <section class="description non-mobile">
               <h4>ATMOSPHERE</h4>
