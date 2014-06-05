@@ -52,7 +52,9 @@ get_header(); ?>
         <span>2008</span>
       </seciton>
     </section>
-    <section id="mission" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -120px;">
+    <section id="mission">
+      <section class="bg" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -120px;">
+      </section>
       <a href="#mission">
         <div class="tab" data-anchor-target="#welcome" data-top-top="top: -96px; background-color: rgba(255,255,255,1); color: rgba(191,211,59,1);" data-top-bottom="top: 0px; background-color: rgba(255,255,255,0); color: rgba(191,211,59,0);">
           <i class="fa fa-chevron-down"></i>

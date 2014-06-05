@@ -191,7 +191,7 @@
   padding-bottom: $base-line-height * 4;
   position: relative;
 
-  &:after{
+  .bg{
     content: "";
     @extend %full-page-image;
     z-index: -1;
@@ -203,8 +203,42 @@
     bottom: 0;
   }
 
+  .tab{
+    @media (max-width: $medium-screen){
+      display: none;
+    }
+  }
+
   & > .header{
     @extend %floating-div;
+    @extend %picto-header;
+
+    &:before, &:after{
+      @include calc(width, "50% - 22em");
+      margin: 0 10em;
+      @include transform(translateY(-75%));
+
+      @include media($medium-media){
+        @include calc(width, "50% - 19em");
+        margin: 0 7em;
+      }
+
+      @include media($medium-media){
+        @include calc(width, "50% - 17em");
+        margin: 0 5em;
+      }
+
+      @include media($small-media){
+        @include calc(width, "50% - 12em");
+        margin: 0 1em;
+      }
+
+      @include media($x-small-media){
+        @include calc(width, "50% - 8.5em");
+        margin: 0 1em;
+
+      }
+    }
   }
 
   ul{
@@ -320,8 +354,12 @@
 
     i{
       color: $bean;
-      font-size: em(64);
+      font-size: em(96);
       margin-bottom: $base-line-height / 4;
+
+      @media (max-width: $small-screen){
+        font-size: em(64);
+      }
     }
 
     .header{

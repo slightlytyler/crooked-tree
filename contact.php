@@ -13,16 +13,16 @@ get_header(); ?>
     </section>
     <ul>
       <a href="tel:2149531142"><li>
-        <i class="fa fa-phone"></i>
+        <i class="fa fa-mobile-phone"></i>
         <span class="phone">214.953.1142</span>
       </li></a>
       <a href="mailto:info@crookedtreecoffeehouse.com"><li>
-        <i class="fa fa-envelope"></i>
+        <i class="fa fa-envelope-o"></i>
         <span class="info">info@crookedtreecoffeehouse.com</span>
       </li></a>
       <h2>To book live music or events:</h2>
       <a href="mailto:booking@crookedtreecoffeehouse.com"><li>
-        <i class="fa fa-music"></i>
+        <i class="icomoon icomoon-guitar"></i>
         <span class="booking">booking@crookedtreecoffeehouse.com</span>
       </li></a>
     </ul>

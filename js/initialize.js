@@ -143,21 +143,27 @@ jQuery(document).ready(function() {
 
     var welcomeHeight = jQuery('#welcome').outerHeight();
     var originsHeight = windowHeight - welcomeHeight;
+    var originsInnerHeight = jQuery('#origins .description').outerHeight()
 
     if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
         jQuery('#about-us-info .title').css('top', windowHeight / 2); // v center title
         jQuery('#about-us-info .title').css('left', windowWidth / 2); // h center title
         jQuery('#about-us-info .title').addClass('centered'); // centered prop
 
-        jQuery('#origins').height(originsHeight); // Origins height
+        if(windowHeight > (originsInnerHeight + welcomeHeight)){ // Origins Heights
+            jQuery('#origins').height(originsHeight);
+        }
 
         jQuery(window).resize(function() {
             jQuery('#about-us-info .title').css('top', windowHeight / 2); // v center title
             jQuery('#about-us-info .title').css('left', windowWidth / 2); // h center title
 
-            jQuery('#origins').height(originsHeight); // Origins height
+            if(windowHeight > (originsInnerHeight + welcomeHeight)){ // Origins Heights
+                jQuery('#origins').height(originsHeight);
+            }
         });
     }
+
 
     // About us welcome push
 
