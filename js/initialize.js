@@ -69,6 +69,7 @@ jQuery(document).ready(function() {
     originsHeight = windowHeight - welcomeHeight;
     originsInnerHeight = jQuery('#origins .description').outerHeight(true);
 
+
     // About desktop enhancements
 
     if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
@@ -122,6 +123,18 @@ jQuery(document).ready(function() {
         }, 700);
         return false;
     });
+
+    // Close sidr on nav link click
+
+    jQuery('li.page_item, #drawer-home').click(function(){
+        jQuery.sidr('close', 'sidr');
+    });
+ }
+
+ // Scroll to top
+
+ function scrollToTop(){
+    $("html, body").animate({ scrollTop: 0 }, "slow");
  }
 
  // Sidr Inits

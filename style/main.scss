@@ -121,8 +121,8 @@ html, body, #page, #content{
   height:100%;
 }
 
-#page{
-  background-color: $coffee;
+html{
+  background: hsl(31,51%,84%) url("assets/images/body-texture.png") 0 0 repeat;
 }
 // Nav
 
