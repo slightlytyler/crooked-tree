@@ -319,7 +319,8 @@ dl {
   font-family: "AmericanTypewriter";
   font-size: 3.375em;
   color: white;
-  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); }
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  filter: Shadow(Color=black, Direction=180, Strength=3); }
   @media screen and (min-width: 48em) and (max-width: 68em) {
     #menu-info h2, #contact-info h2, #about-us-info h2 {
       font-size: 2.875em; } }
@@ -437,7 +438,8 @@ footer#footer h2, footer#footer #explore {
   font-family: "NoveMedium";
   font-size: 3.25em;
   color: #bfd33b;
-  text-shadow: 2px 2px 0px #472e13; }
+  text-shadow: 2px 2px 0px #472e13;
+  filter: dropshadow(color=#472e13, offx=2, offy=2); }
 
 #mission .product p {
   font-family: "GothamBook";
@@ -455,7 +457,8 @@ footer#footer h2, footer#footer #explore {
   margin-right: auto;
   max-width: 100%;
   position: relative;
-  height: auto; }
+  height: auto;
+  overflow-x: hidden; }
   #index:after, #about-us:after, #menu:after, #contact:after {
     content: "";
     display: table;
@@ -820,6 +823,11 @@ html {
         width: calc(100% - 2em);
         left: 1em; } }
     #about-us-info .title.centered {
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -o-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
       -webkit-transform: translate3D(-50%, -50%, 0);
       -moz-transform: translate3D(-50%, -50%, 0);
       -ms-transform: translate3D(-50%, -50%, 0);
@@ -848,6 +856,11 @@ html {
     position: absolute;
     width: 100%;
     left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
     -webkit-transform: translate3D(-50%, 0, 0);
     -moz-transform: translate3D(-50%, 0, 0);
     -ms-transform: translate3D(-50%, 0, 0);
@@ -1208,14 +1221,24 @@ html {
     -moz-transform: translate3D(0, 20%, 0);
     -ms-transform: translate3D(0, 20%, 0);
     -o-transform: translate3D(0, 20%, 0);
-    transform: translate3D(0, 20%, 0); }
+    transform: translate3D(0, 20%, 0);
+    -webkit-transform: translateY(20%);
+    -moz-transform: translateY(20%);
+    -ms-transform: translateY(20%);
+    -o-transform: translateY(20%);
+    transform: translateY(20%); }
     @media screen and (min-width: 30em) and (max-width: 48em) {
       #contact-info li i {
         -webkit-transform: translate3D(0, 30%, 0);
         -moz-transform: translate3D(0, 30%, 0);
         -ms-transform: translate3D(0, 30%, 0);
         -o-transform: translate3D(0, 30%, 0);
-        transform: translate3D(0, 30%, 0); } }
+        transform: translate3D(0, 30%, 0);
+        -webkit-transform: translateY(30%);
+        -moz-transform: translateY(30%);
+        -ms-transform: translateY(30%);
+        -o-transform: translateY(30%);
+        transform: translateY(30%); } }
     @media screen and (max-width: 30em) {
       #contact-info li i {
         -webkit-transform: translate3D(0, 60%, 0);
@@ -1223,6 +1246,11 @@ html {
         -ms-transform: translate3D(0, 60%, 0);
         -o-transform: translate3D(0, 60%, 0);
         transform: translate3D(0, 60%, 0);
+        -webkit-transform: translateY(60%);
+        -moz-transform: translateY(60%);
+        -ms-transform: translateY(60%);
+        -o-transform: translateY(60%);
+        transform: translateY(60%);
         left: 1.2em; } }
   #contact-info li span {
     display: inline-block;
@@ -1383,6 +1411,11 @@ footer#footer {
     background-repeat: no-repeat;
     background-size: contain;
     padding-bottom: 64.4%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translate3D(-50%, -50%, 0);
     -moz-transform: translate3D(-50%, -50%, 0);
     -ms-transform: translate3D(-50%, -50%, 0);

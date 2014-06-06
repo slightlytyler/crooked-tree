@@ -36,13 +36,16 @@
       position: absolute;
       left: .6em;
       @include transform(translate3D(0, 20%, 0));
+      @include transform(translateY(20%));
 
       @include media($small-media){
         @include transform(translate3D(0, 30%, 0));
+        @include transform(translateY(30%));
       }
 
       @include media($x-small-media){
         @include transform(translate3D(0, 60%, 0));
+        @include transform(translateY(60%));
         left: 1.2em;
       }
     }

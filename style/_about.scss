@@ -54,6 +54,7 @@
     }
 
     &.centered{
+      @include transform(translateX(-50%) translateY(-50%));
       @include transform(translate3D(-50%, -50%, 0));
     }
   }
@@ -83,6 +84,7 @@
     position: absolute;
     width: 100%;
     left: 50%;
+    @include transform(translateX(-50%));
     @include transform(translate3D(-50%, 0 ,0));
 
     @media (max-width: $large-screen){

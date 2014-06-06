@@ -23,6 +23,7 @@
   max-width: 100%;
   position: relative;
   height: auto;
+  overflow-x: hidden;
 
   &.fill{
     height: 100%

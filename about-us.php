@@ -76,14 +76,19 @@ get_header(); ?>
             </section>
             <section class="imagery">
               <section>
-                <picture alt="People Pic">
-                  <source src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-1-0.5x.jpg">
-                  <source src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-1.jpg" media="(min-width: 320px">
-                  <source src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-1-2x.jpg" media="(min-width: 768px)">
-                  <noscript>
-                      <img src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-1.jpg" alt="People Pic">
-                  </noscript>
-                </picture>
+                <!--[if ! lte IE 9]><!-->
+                  <picture alt="Atmosphere Pic">
+                    <source src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-1-0.5x.jpg">
+                    <source src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-1.jpg" media="(min-width: 320px">
+                    <source src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-1-2x.jpg" media="(min-width: 1768px)">
+                    <noscript>
+                        <img src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-1.jpg" alt="Atmosphere Pic">
+                    </noscript>
+                  </picture>
+                <!--<![endif]-->
+                <!--[if lte IE 9]>
+                  <img src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-1.jpg" alt="Atmosphere Pic">
+                <![endif]-->
               </section>
             </section>
         </li>
@@ -99,14 +104,19 @@ get_header(); ?>
             </section>
             <section class="imagery">
               <section>
-                <picture alt="Atmosphere Pic">
-                  <source src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-2-0.5x.jpg">
-                  <source src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-2.jpg" media="(min-width: 320px">
-                  <source src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-2-2x.jpg" media="(min-width: 1768px)">
-                  <noscript>
-                      <img src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-2.jpg" alt="Atmosphere Pic">
-                  </noscript>
-                </picture>
+                <!--[if ! lte IE 9]><!-->
+                  <picture alt="Atmosphere Pic">
+                    <source src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-2-0.5x.jpg">
+                    <source src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-2.jpg" media="(min-width: 320px">
+                    <source src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-2-2x.jpg" media="(min-width: 1768px)">
+                    <noscript>
+                        <img src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-2.jpg" alt="Atmosphere Pic">
+                    </noscript>
+                  </picture>
+                <!--<![endif]-->
+                <!--[if lte IE 9]>
+                  <img src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-2.jpg" alt="Atmosphere Pic">
+                <![endif]-->
               </section>
             </section>
             <section class="description non-mobile">

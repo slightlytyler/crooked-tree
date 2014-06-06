@@ -25,6 +25,7 @@
     background-size: contain;
     padding-bottom: 64.4%;
 
+    @include transform(translateX(-50%) translateY(-50%));
     @include transform(translate3D(-50%, -50%, 0));
   }
 }
