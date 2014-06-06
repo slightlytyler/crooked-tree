@@ -143,7 +143,8 @@ html{
   opacity: 0;
 
   @media(max-width: $small-screen){
-    opacity: 1;
+    @include animation(smooth-entry-reverse 1s);
+    @include animation-fill-mode(forwards);
   }
 }
 
