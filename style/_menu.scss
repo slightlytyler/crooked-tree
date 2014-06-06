@@ -26,11 +26,13 @@
 
   .title{
     @extend %page-title;
+    @include animation(smooth-entry 1s);
   }
 
   #tag-line{
     max-width: $large-screen;
     margin: 0 auto;
+    @include animation(smooth-entry 1s);
   }
 
   ul{
@@ -44,6 +46,11 @@
 
     &:last-child{
       margin-bottom: 0;
+    }
+
+    &.fade{
+      @include animation(smooth-entry-reverse 1s);
+      opacity: 1;
     }
 
     .header{

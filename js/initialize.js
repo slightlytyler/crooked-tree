@@ -57,6 +57,8 @@ jQuery(document).ready(function() {
     pageInit();
 
     setSkrollr();
+
+    skrollrSingleton();
    
 });
 
@@ -217,4 +219,20 @@ function enableScroll(){
     html.css('overflow', html.data('previous-overflow'));
     window.scrollTo(scrollPosition[0], scrollPosition[1])
     mobileScrollDisable = false;
+}
+
+function skrollrSingleton(){
+    jQuery('.lazy-load.fade').each(function(){
+        $(this).removeAttr('data-edge-strategy data-top-bottom data-bottom-top');
+        console.log('ughhh');
+    });
+    skrollr.refresh();
+
+    $(window).scroll(function(){
+        jQuery('.lazy-load.fade').each(function(){
+            $(this).removeAttr('data-edge-strategy data-top-bottom data-bottom-top');
+            console.log('ughhh');
+        });
+        skrollr.refresh();
+    });
 }

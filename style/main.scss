@@ -3,6 +3,7 @@
 @import "neat/neat";
 
 @import "fonts";
+@import "animation";
 
 // Main
 
@@ -134,6 +135,16 @@ html, body, #page, #content{
 
 html{
   background: hsl(31,51%,84%) url("assets/images/body-texture.png") 0 0 repeat;
+}
+
+// For lazy load emulation
+
+.lazy-load{
+  opacity: 0;
+
+  @media(max-width: $small-screen){
+    opacity: 1;
+  }
 }
 
 // Nav

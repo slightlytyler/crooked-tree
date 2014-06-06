@@ -15,12 +15,14 @@
 
   .title{
     @extend %page-title;
+    @include animation(smooth-entry 1s);
   }
 
   ul{
     width: 100%;
     max-width: em(480);
     margin: 0 auto;
+    @include animation(smooth-entry 1s);
   }
 
   li{

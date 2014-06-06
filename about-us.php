@@ -11,7 +11,7 @@ get_header(); ?>
     <section class="title" data-0="margin-top: 0%; opacity: 1;" data-320="margin-top: 12%; opacity: 0;">
         <h1>ABOUT US</h1>
     </section>
-    <seciton id="welcome">
+    <section id="welcome">
       <section id="mission-statement" data-0="margin-top: -13%; opacity: 1;" data-320="margin-top: -4%; opacity: 0;">
         <h2>People. Atmosphere. Coffee.</h2>
       </section>
@@ -31,9 +31,9 @@ get_header(); ?>
           passionate about coffee and people.
         </p>
       </div>
-    </seciton>
+    </section>
     <section id="origins" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -120px;">
-      <seciton class="description">
+      <section class="lazy-load" data-bottom-top="@class:fade;" data-top-bottom="@class:fade;" data-edge-strategy="reset">
         <h4>ORIGINS</h4>
         <p>
           Crooked Tree Coffeehouse is as a dream of our owners Kristyn Bartley and Sarah Momary.
@@ -42,15 +42,11 @@ get_header(); ?>
           <p>They feel that the coffeehouse provides a unique opportunity to feature 
           people, from our employees, to our customers, to the producers of our coffee.
         </p>
-      </seciton>
-      <seciton id="founded"
-      data-anchor-target="#welcome"
-      data-300-top-top="right: -240px;"
-      data-top-top="right: 0;"
-      >
+      </section>
+      <section id="founded" class="lazy-load" data-bottom-top="@class:fade;" data-top-bottom="@class:fade;" data-edge-strategy="reset">
         <h5>FOUNDED</h5>
         <span>2008</span>
-      </seciton>
+      </section>
     </section>
     <section id="mission">
       <section class="bg" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -120px;">
@@ -64,7 +60,7 @@ get_header(); ?>
         <h3>OUR MISSION</h3>
       </section>
       <ul>
-        <li class="normal-orientation">
+        <li class="lazy-load" data-bottom-top="@class:fade;" data-top-bottom="@class:fade;" data-edge-strategy="reset">
           <section class="description">
              <h4>PEOPLE</h4>
               <p>
@@ -92,7 +88,7 @@ get_header(); ?>
               </section>
             </section>
         </li>
-        <li class="flip-flop">
+        <li class="lazy-load" data-bottom-top="@class:fade;" data-top-bottom="@class:fade;" data-edge-strategy="reset">
             <section class="description mobile">
               <h4>ATMOSPHERE</h4>
               <p>
@@ -129,7 +125,7 @@ get_header(); ?>
               </p>
           </section>
         </li>
-        <li class="product">
+        <li class="lazy-load" data-bottom-top="@class:fade;" data-top-bottom="@class:fade;" data-edge-strategy="reset">
           <section class="header">
             <h4>PRODUCT</h4>
           </section>

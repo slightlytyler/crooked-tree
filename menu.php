@@ -15,7 +15,7 @@ get_header(); ?>
       <h2>Our menu, we hope, features and directs you towards how truly great coffee can be, when well prepared.</h2>
     </section>
     <ul>
-      <li>
+      <li class="lazy-load" data-bottom-top="@class:fade;" data-top-bottom="@class:fade;" data-edge-strategy="reset">
         <section class="header">
           <i class="icomoon icomoon-coffee"></i>
         </section>
@@ -25,7 +25,7 @@ get_header(); ?>
           French Press, etc.) that rotates based on availability. We also make delicious cold brewed iced coffee.
         </p>
       </li>
-      <li>
+      <li class="lazy-load" data-bottom-top="@class:fade;" data-top-bottom="@class:fade;" data-edge-strategy="reset">
         <section class="header">
           <i class="icomoon icomoon-espresso"></i>
         </section>
@@ -38,7 +38,7 @@ get_header(); ?>
           to Latte.
         </p>
       </li>
-      <li>
+      <li class="lazy-load" data-bottom-top="@class:fade;" data-top-bottom="@class:fade;" data-edge-strategy="reset">
         <section class="header">
           <i class="icomoon icomoon-bottle"></i>
         </section>
@@ -49,7 +49,7 @@ get_header(); ?>
           or fruit spritzers, if you are looking for something beyond coffee.
         </p>
       </li>
-      <li>
+      <li class="lazy-load" data-bottom-top="@class:fade;" data-top-bottom="@class:fade;" data-edge-strategy="reset">
         <section class="header">
           <i class="icomoon icomoon-cupcake-inverse"></i>
         </section>

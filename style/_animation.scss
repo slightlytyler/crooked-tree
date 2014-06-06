@@ -1,0 +1,63 @@
+@include keyframes(smooth-entry) {
+  from {
+    opacity: 0;
+    @include transform(translateY(-2em));
+    @include transform(translate3D(0, -2em, 0));
+  }
+  to {
+    opacity: 1;
+    @include transform(translateY(0));
+    @include transform(translate3D(0, 0, 0));
+  }
+}
+
+@include keyframes(smooth-entry-reverse) {
+  from {
+    opacity: 0;
+    @include transform(translate3D(0, 2em, 0));
+  }
+  to {
+    opacity: 1;
+    @include transform(translateY(0));
+    @include transform(translate3D(0, 0, 0));
+  }
+}
+
+@include keyframes(smooth-entry-centered) {
+  from {
+    opacity: 0;
+    @include transform(translateX(-50%) translateY(calc(-50% - 2em)));
+    @include transform(translate3D(-50%, calc(-50% - 2em), 0));
+  }
+  to {
+    opacity: 1;
+    @include transform(translateX(-50%) translateY(-50%));
+    @include transform(translate3D(-50%, -50%, 0));
+  }
+}
+
+@include keyframes(smooth-entry-side-left) {
+  from {
+    opacity: 0;
+    @include transform(translateX(-100%));
+    @include transform(translate3D(-100%, 0, 0));
+  }
+  to {
+    opacity: 1;
+    @include transform(translateY(0));
+    @include transform(translate3D(0, 0, 0));
+  }
+}
+
+@include keyframes(smooth-entry-side-right) {
+  from {
+    opacity: 0;
+    @include transform(translateX(100%));
+    @include transform(translate3D(100%, 0, 0));
+  }
+  to {
+    opacity: 1;
+    @include transform(translateY(0));
+    @include transform(translate3D(0, 0, 0));
+  }
+}
