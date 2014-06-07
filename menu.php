@@ -6,7 +6,14 @@
 
 get_header(); ?>
 
-<div id="menu" class="outer-page" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -60px;"> 
+<div id="menu" class="outer-page bg-mobile-target use-window" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -60px;"> 
+  <picture class="bg-mobile">
+    <source src="<?php bloginfo('template_directory'); ?>/assets/images/Pic-Menu.jpg">
+    <source src="<?php bloginfo('template_directory'); ?>/assets/images/Pic-Menu-2x.jpg" media="(min-width: 768px">
+    <noscript>
+        <img src="<?php bloginfo('template_directory'); ?>/assets/images/Pic-Menu.jpg">
+    </noscript>
+  </picture>
   <div id="menu-info" class="inner-page">
     <section class="title">
         <h1>MENU</h1>

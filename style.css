@@ -668,7 +668,7 @@ footer#footer h2, footer#footer #explore {
   font-family: "GothamBook";
   font-size: 0.875em; }
 
-#index, #about-us, #menu, #contact, #origins, #mission .bg {
+#index, #about-us, #menu, #contact, #origins .bg, #mission .bg {
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -782,6 +782,15 @@ html {
       -webkit-animation-fill-mode: forwards;
       -moz-animation-fill-mode: forwards;
       animation-fill-mode: forwards; } }
+
+.bg-mobile img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -10;
+  max-width: 5000px; }
 
 #fallback-navigation.hide {
   display: none; }
@@ -1024,9 +1033,11 @@ html {
 #about-us {
   position: relative;
   height: auto;
-  background-image: url("assets/images/Pic-Coffee-3.jpg");
   z-index: 0; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+  @media (min-width: 30em) {
+    #about-us {
+      background-image: url("assets/images/Pic-Coffee-3.jpg"); } }
+  @media only screen and (min-width: 30em) and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-width: 30em) and (min--moz-device-pixel-ratio: 1.3), only screen and (min-width: 30em) and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-width: 30em) and (min-resolution: 125dpi), only screen and (min-width: 30em) and (min-resolution: 1.3dppx) {
     #about-us {
       background-image: url("assets/images/Pic-Coffee-3-2x.jpg");
       background-size: cover; } }
@@ -1036,6 +1047,8 @@ html {
   margin-bottom: 0;
   padding-left: 0;
   padding-right: 0; }
+  #about-us-info h2 {
+    vertical-align: text-bottom; }
   #about-us-info h4 {
     padding: 0 1em;
     margin-bottom: 0.75em; }
@@ -1047,7 +1060,6 @@ html {
         text-align: center; } }
   #about-us-info .title {
     position: absolute;
-    top: 4.5em;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -1058,7 +1070,8 @@ html {
       #about-us-info .title {
         width: -webkit-calc(100% - 2em);
         width: calc(100% - 2em);
-        left: 1em; } }
+        left: 1em;
+        top: 4.5em !important; } }
     #about-us-info .title.centered {
       -webkit-animation: smooth-entry-centered 1s;
       -moz-animation: smooth-entry-centered 1s;
@@ -1114,7 +1127,10 @@ html {
         top: -10%; } }
     @media (max-width: 30em) {
       #about-us-info #mission-statement {
-        top: -60%; } }
+        top: -30%; } }
+    @media (max-width: 30em) {
+      #about-us-info #mission-statement {
+        top: -45%; } }
 
 #welcome {
   position: relative;
@@ -1136,23 +1152,37 @@ html {
     margin: 0 auto; }
 
 #origins {
-  background-image: url("assets/images/Origins.jpg");
   float: left;
   display: block;
   margin-right: 38.19821%;
   width: 100%;
   position: relative;
-  overflow-x: hidden; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
-    #origins {
-      background-image: url("assets/images/Origins-2x.jpg");
-      background-size: cover; } }
+  overflow-x: hidden;
+  z-index: 3; }
   #origins:last-child {
     margin-right: 0; }
   @media (max-width: 30em) {
     #origins {
       padding: 0 1em; } }
-  #origins section:first-child {
+  #origins .bg-mobile img {
+    z-index: -11; }
+  #origins .bg {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url("assets/images/Origins.jpg"); }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+      #origins .bg {
+        background-image: url("assets/images/Origins-2x.jpg");
+        background-size: cover; } }
+    @media (min-width: 30em) {
+      #origins .bg {
+        display: noen; } }
+  #origins .description {
     float: left;
     display: block;
     margin-right: 16.03631%;
@@ -1162,38 +1192,38 @@ html {
     padding: 1.5em 1em;
     text-align: center;
     margin: 3em 0 9em; }
-    #origins section:first-child:last-child {
+    #origins .description:last-child {
       margin-right: 0; }
-    #origins section:first-child.fade {
+    #origins .description.fade {
       -webkit-animation: smooth-entry-side-left 1s;
       -moz-animation: smooth-entry-side-left 1s;
       animation: smooth-entry-side-left 1s; }
     @media screen and (min-width: 90em) {
-      #origins section:first-child {
+      #origins .description {
         float: left;
         display: block;
         margin-right: 7.42297%;
         width: 73.14426%; }
-        #origins section:first-child:last-child {
+        #origins .description:last-child {
           margin-right: 0; } }
     @media screen and (min-width: 48em) and (max-width: 68em) {
-      #origins section:first-child {
+      #origins .description {
         float: left;
         display: block;
         margin-right: 10.1484%;
         width: 63.28387%; }
-        #origins section:first-child:last-child {
+        #origins .description:last-child {
           margin-right: 0; } }
     @media screen and (min-width: 30em) and (max-width: 48em) {
-      #origins section:first-child {
+      #origins .description {
         float: left;
         display: block;
         margin-right: 7.42297%;
         width: 73.14426%; }
-        #origins section:first-child:last-child {
+        #origins .description:last-child {
           margin-right: 0; } }
     @media (max-width: 30em) {
-      #origins section:first-child {
+      #origins .description {
         float: left;
         display: block;
         margin-right: 38.19821%;
@@ -1201,7 +1231,7 @@ html {
         margin-bottom: 3em;
         background-color: white;
         box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5); }
-        #origins section:first-child:last-child {
+        #origins .description:last-child {
           margin-right: 0; } }
 
 #founded {
@@ -1253,6 +1283,9 @@ html {
       #mission .bg {
         background-image: url("assets/images/Mission-2x.jpg");
         background-size: cover; } }
+    @media (min-width: 30em) {
+      #mission .bg {
+        display: noen; } }
   @media (max-width: 48em) {
     #mission .tab {
       display: none; } }
@@ -1418,12 +1451,8 @@ html {
     display: block;
     margin-bottom: 1.5em; }
 
-#menu {
-  background-image: url("assets/images/Pic-Menu.jpg"); }
-  @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
-    #menu {
-      background-image: url("assets/images/Pic-Menu-2x.jpg");
-      background-size: cover; } }
+#menu .bg-mobile img {
+  position: fixed; }
 
 #menu-info {
   margin-bottom: 6em; }

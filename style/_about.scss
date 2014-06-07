@@ -4,8 +4,11 @@
   @extend %full-page;
   position: relative;
   height: auto;
-  @include retina-image(assets/images/Pic-Coffee-3, cover, jpg, null, -2x, false);
   z-index: 0;
+
+  @media(min-width: $small-screen){
+    @include retina-image(assets/images/Pic-Coffee-3, cover, jpg, null, -2x, false);
+  }
 }
 
 #about-us-info{
@@ -17,6 +20,7 @@
 
   h2{
     @extend %type-theme-h1;
+    vertical-align: text-bottom;
   }
 
   h3{
@@ -45,13 +49,13 @@
   .title{
     @extend %page-title;
     position: absolute;
-    top: $base-line-height * 3;
     @include box-sizing(border-box);
     @include animation(smooth-entry 1s);
 
     @media (max-width: $small-screen){
       @include calc(width, '100% - 2em');
       left: 1em;
+      top: $base-line-height * 3 !important;
     }
 
     &.centered{
@@ -95,7 +99,11 @@
     }
 
     @media (max-width: $small-screen){
-      top: -60%;
+      top: -30%;
+    }
+
+    @media (max-width: $small-screen){
+      top: -45%;
     }
   }
 }
@@ -125,17 +133,36 @@
 }
 
 #origins{
-  @extend %full-page-image;
-  @include retina-image(assets/images/Origins, cover, jpg, null, -2x, false);
   @include span-columns(1 of 1);
   position: relative;
   overflow-x: hidden;
+  z-index: 3;
 
   @media (max-width: $small-screen){
     padding: 0 1em;
   }
 
-  section:first-child{
+  .bg-mobile img{
+    z-index: -11;
+  }
+
+  .bg{
+    content: "";
+    @extend %full-page-image;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    @include retina-image(assets/images/Origins, cover, jpg, null, -2x, false);
+
+    @media(min-width: $small-screen){
+      display: noen;
+    }
+  }
+
+  .description{
     @include span-columns(1 of 2);
     max-width: 46em;
     background-color: $white-a;
@@ -216,6 +243,10 @@
     right: 0;
     top: 0;
     bottom: 0;
+
+    @media(min-width: $small-screen){
+      display: noen;
+    }
   }
 
   .tab{

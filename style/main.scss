@@ -35,6 +35,14 @@ html{
   }
 }
 
+// iOS fixed background work around
+
+.bg-mobile img{
+  @include position(absolute, 0 0 0 0);
+  z-index: -10;
+  max-width: 5000px;
+}
+
 // Nav
 
 @import "fallback-nav"; // for when js is disabled

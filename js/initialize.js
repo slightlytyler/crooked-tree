@@ -1,26 +1,84 @@
  // Some vars
 
+if(!(/iPhone|iPod/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+    var windowHeight = jQuery(window).height();
+}
+else {
+    var windowHeight = jQuery(window).height() + 70;
+    console.log('ipod');
+}
 var innerHeight = jQuery('.inner-page').outerHeight(true);
-var windowHeight = jQuery(window).height();
 var windowWidth = jQuery(window).width();
 var welcomeHeight = jQuery('#welcome').outerHeight();
 var originsHeight = windowHeight - welcomeHeight;
 var originsInnerHeight = jQuery('#origins .description').outerHeight(true);
 var mobileScrollDisable = false; // default
+var landscape = false;
+var portrait = false;
+var windowAspect = windowWidth / windowHeight;
 
+if(windowWidth >= windowHeight){
+    landscape = true;
+    portrait = false;
+}
+else{
+    landscape = false;
+    portrait = true;
+}
 
 
 jQuery(window).resize(function() {
-    windowHeight = jQuery(window).height()
+    if(!(/iPhone|iPod/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+        var windowHeight = jQuery(window).height();
+    }
+    else {
+        var windowHeight = jQuery(window).height() + 70;
+        console.log('ipod');
+    }
     windowWidth = jQuery(window).width();
+    windowAspect = windowWidth / windowHeight;
+
+    if(windowWidth >= windowHeight){
+        landscape = true;
+        portrait = false;
+    }
+    else{
+        landscape = false;
+        portrait = true;
+    }
 });
 
+window.onorientationchange = function(){
+    if(!(/iPhone|iPod/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+        var windowHeight = jQuery(window).height();
+    }
+    else {
+        var windowHeight = jQuery(window).height() + 70;
+        console.log('ipod');
+    }
+    windowWidth = jQuery(window).width();
+    windowAspect = windowWidth / windowHeight;
+
+    if(windowWidth >= windowHeight){
+        landscape = true;
+        portrait = false;
+    }
+    else{
+        landscape = false;
+        portrait = true;
+    }
+}
+
 jQuery(document).ready(function() {
+    // Set jQuery Picture
+
+    $('picture').picture();
 
     sidrSelect()
 
     jQuery(window).resize(function() {
         sidrSelect();
+        mobileBG();
     });
 
     // Disable mobile scroll while drawer is open
@@ -65,11 +123,24 @@ jQuery(document).ready(function() {
  function pageInit(){
 
     innerHeight = jQuery('.inner-page').outerHeight(true);
-    windowHeight = jQuery(window).height();
+    if(!(/iPhone|iPod/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+        var windowHeight = jQuery(window).height();
+    }
+    else {
+        var windowHeight = jQuery(window).height() + 70;
+        console.log('ipod');
+    }
     windowWidth = jQuery(window).width();
     welcomeHeight = jQuery('#welcome').outerHeight();
     originsHeight = windowHeight - welcomeHeight;
     originsInnerHeight = jQuery('#origins .description').outerHeight(true);
+
+    // Set jQuery Picture
+
+    $('picture').picture();
+
+    // Mobile BGs
+    mobileBG();
 
 
     // About desktop enhancements
@@ -131,10 +202,6 @@ jQuery(document).ready(function() {
     jQuery('li.page_item, #drawer-home').click(function(){
         jQuery.sidr('close', 'sidr');
     });
-
-    // Set jQuery Picture
-
-    $('picture').picture();
  }
 
  // Scroll to top
@@ -234,5 +301,38 @@ function skrollrSingleton(){
             console.log('ughhh');
         });
         skrollr.refresh();
+    });
+}
+
+function mobileBG() {
+    jQuery('.bg-mobile').each(function() {
+        var ratio = 0;  // Used for aspect ratio
+        var img = jQuery(this).children('img')[0]; // Get my img elem
+        var picRealWidth, picRealHeight, adjustedWidth, adjustedHeight;
+        jQuery("<img/>") // Make in memory copy of image to avoid css issues
+            .attr("src", jQuery(img).attr("src"))
+            .load(function() {
+                picRealWidth = this.width;   // Note: $(this).width() will not
+                picRealHeight = this.height; // work for in memory images.
+                console.log(img);
+                ratio = picRealWidth / picRealHeight;
+
+                if(landscape && windowAspect >= ratio){
+                    adjustedWidth = windowWidth;
+                    adjustedHeight = adjustedWidth / ratio;
+                }
+                else{
+                    if(jQuery(img).closest('.bg-mobile-target').hasClass('use-window')){
+                        adjustedHeight = windowHeight;
+                    }
+                    else{
+                        adjustedHeight = jQuery(img).closest('.bg-mobile-target').height();
+                    }
+                    adjustedWidth = adjustedHeight * ratio;
+                }
+
+                jQuery(img).css('width', adjustedWidth);
+                jQuery(img).css('Height', adjustedHeight);
+            });
     });
 }

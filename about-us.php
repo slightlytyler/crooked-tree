@@ -6,8 +6,15 @@
 
 get_header(); ?>
 
-<div id="about-us" data-top="background-position:0px 0px;" data-bottom="background-position:0px -60px;"> 
+<div id="about-us" class="bg-mobile-target use-window" data-top="background-position:0px 0px;" data-bottom="background-position:0px -60px;"> 
   <div id="about-us-info">
+    <picture class="bg-mobile">
+      <source src="<?php bloginfo('template_directory'); ?>/assets/images/Pic-Coffee-3.jpg">
+      <source src="<?php bloginfo('template_directory'); ?>/assets/images/Pic-Coffee-3-2x.jpg" media="(min-width: 768px">
+      <noscript>
+          <img src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-1.jpg">
+      </noscript>
+    </picture>
     <section class="title" data-0="margin-top: 0%; opacity: 1;" data-320="margin-top: 12%; opacity: 0;">
         <h1>ABOUT US</h1>
     </section>
@@ -32,8 +39,17 @@ get_header(); ?>
         </p>
       </div>
     </section>
-    <section id="origins" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -120px;">
-      <section class="lazy-load" data-bottom-top="@class:fade;" data-top-bottom="@class:fade;" data-edge-strategy="reset">
+    <section id="origins" class="bg-mobile-target">
+      <picture class="bg-mobile">
+        <source src="<?php bloginfo('template_directory'); ?>/assets/images/Origins.jpg">
+        <source src="<?php bloginfo('template_directory'); ?>/assets/images/Origins-2x.jpg" media="(min-width: 768px">
+        <noscript>
+            <img src="<?php bloginfo('template_directory'); ?>/assets/images/Origins.jpg">
+        </noscript>
+      </picture>
+      <section class="bg" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -120px;">
+      </section>
+      <section class="description" data-bottom-top="@class:description fade;" data-top-bottom="@class:description fade;" data-edge-strategy="reset">
         <h4>ORIGINS</h4>
         <p>
           Crooked Tree Coffeehouse is as a dream of our owners Kristyn Bartley and Sarah Momary.
@@ -48,7 +64,14 @@ get_header(); ?>
         <span>2008</span>
       </section>
     </section>
-    <section id="mission">
+    <section id="mission" class="bg-mobile-target">
+      <picture class="bg-mobile">
+        <source src="<?php bloginfo('template_directory'); ?>/assets/images/Mission.jpg">
+        <source src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-2x.jpg" media="(min-width: 768px">
+        <noscript>
+            <img src="<?php bloginfo('template_directory'); ?>/assets/images/Mission.jpg">
+        </noscript>
+      </picture>
       <section class="bg" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -120px;">
       </section>
       <a href="#mission" class="hash-nav">
