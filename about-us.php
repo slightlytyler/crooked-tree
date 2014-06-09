@@ -8,15 +8,17 @@ get_header(); ?>
 
 <div id="about-us" class="bg-mobile-target use-window" data-top="background-position:0px 0px;" data-bottom="background-position:0px -60px;"> 
   <div id="about-us-info">
-    <picture class="bg-mobile">
-      <source src="<?php bloginfo('template_directory'); ?>/assets/images/Pic-Coffee-3.jpg">
-      <source src="<?php bloginfo('template_directory'); ?>/assets/images/Pic-Coffee-3-2x.jpg" media="(min-width: 768px">
-      <noscript>
-          <img src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-1.jpg">
-      </noscript>
-    </picture>
-    <section class="title" data-0="margin-top: 0%; opacity: 1;" data-320="margin-top: 12%; opacity: 0;">
-        <h1>ABOUT US</h1>
+    <section id="splash">
+      <picture class="bg-mobile">
+        <source src="<?php bloginfo('template_directory'); ?>/assets/images/Pic-Coffee-3.jpg">
+        <source src="<?php bloginfo('template_directory'); ?>/assets/images/Pic-Coffee-3-2x.jpg" media="(min-width: 768px">
+        <noscript>
+            <img src="<?php bloginfo('template_directory'); ?>/assets/images/Mission-Imagery-1.jpg">
+        </noscript>
+      </picture>
+      <section class="title" data-0="margin-top: 0%; opacity: 1;" data-320="margin-top: 12%; opacity: 0;">
+          <h1>ABOUT US</h1>
+      </section>
     </section>
     <section id="welcome">
       <section id="mission-statement" data-0="margin-top: -13%; opacity: 1;" data-320="margin-top: -4%; opacity: 0;">

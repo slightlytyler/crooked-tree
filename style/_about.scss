@@ -6,7 +6,7 @@
   height: auto;
   z-index: 0;
 
-  @media(min-width: $small-screen){
+  @media(min-width: $medium-screen){
     @include retina-image(assets/images/Pic-Coffee-3, cover, jpg, null, -2x, false);
   }
 }
@@ -108,12 +108,17 @@
   }
 }
 
+#splash{
+  z-index: 0;
+}
+
 #welcome{
   position: relative;
   width: 100%;
   @include span-columns(1 of 1);
   @extend %floating-div;
   @extend %item-card;
+  z-index: 1;
 
   & > .header{
     @extend %picto-header;
@@ -135,15 +140,15 @@
 #origins{
   @include span-columns(1 of 1);
   position: relative;
-  overflow-x: hidden;
-  z-index: 3;
+  z-index: 2;
 
   @media (max-width: $small-screen){
     padding: 0 1em;
   }
 
   .bg-mobile img{
-    z-index: -11;
+    z-index: -3;
+    position: absolute;
   }
 
   .bg{
@@ -155,10 +160,9 @@
     right: 0;
     top: 0;
     bottom: 0;
-    @include retina-image(assets/images/Origins, cover, jpg, null, -2x, false);
 
-    @media(min-width: $small-screen){
-      display: noen;
+    @media(min-width: $medium-screen) {
+      @include retina-image(assets/images/Origins, cover, jpg, null, -2x, false);
     }
   }
 
@@ -232,21 +236,26 @@
   @include span-columns(1 of 1);
   padding-bottom: $base-line-height * 4;
   position: relative;
+  z-index: 3;
 
   .bg{
     content: "";
     @extend %full-page-image;
     z-index: -1;
-    @include retina-image(assets/images/Mission, cover, jpg, null, -2x, false);
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
 
-    @media(min-width: $small-screen){
-      display: noen;
+    @media(min-width: $medium-screen){
+      @include retina-image(assets/images/Mission, cover, jpg, null, -2x, false);
     }
+  }
+
+  .bg-mobile img{
+    z-index: -3;
+    position: absolute;
   }
 
   .tab{

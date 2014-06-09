@@ -326,7 +326,7 @@ function mobileBG() {
                         adjustedHeight = windowHeight;
                     }
                     else{
-                        adjustedHeight = jQuery(img).closest('.bg-mobile-target').height();
+                        adjustedHeight = jQuery(img).closest('.bg-mobile-target').outerHeight();
                     }
                     adjustedWidth = adjustedHeight * ratio;
                 }

@@ -2,10 +2,9 @@
 
 #menu{
   @extend %full-page;
- 
 
-  .bg-mobile img{
-    position: fixed;
+  @media (min-width: $small-screen){
+    @include retina-image(assets/images/Pic-Menu, cover, jpg, null, -2x, false);
   }
 }
 

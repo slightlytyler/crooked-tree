@@ -37,10 +37,15 @@ html{
 
 // iOS fixed background work around
 
-.bg-mobile img{
-  @include position(absolute, 0 0 0 0);
-  z-index: -10;
-  max-width: 5000px;
+.bg-mobile{
+  @media (min-width: $small-screen){
+    display: none;
+  }
+  img{
+    @include position(fixed, 0 0 0 0);
+    max-width: 5000px;
+    z-index: -4;
+  }
 }
 
 // Nav
