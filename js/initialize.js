@@ -5,7 +5,6 @@ if(!(/iPhone|iPod/i).test(navigator.userAgent || navigator.vendor || window.oper
 }
 else {
     var windowHeight = jQuery(window).height() + 70;
-    console.log('ipod');
 }
 var innerHeight = jQuery('.inner-page').outerHeight(true);
 var windowWidth = jQuery(window).width();
@@ -33,7 +32,6 @@ jQuery(window).resize(function() {
     }
     else {
         var windowHeight = jQuery(window).height() + 70;
-        console.log('ipod');
     }
     windowWidth = jQuery(window).width();
     windowAspect = windowWidth / windowHeight;
@@ -54,7 +52,6 @@ window.onorientationchange = function(){
     }
     else {
         var windowHeight = jQuery(window).height() + 70;
-        console.log('ipod');
     }
     windowWidth = jQuery(window).width();
     windowAspect = windowWidth / windowHeight;
@@ -128,7 +125,6 @@ jQuery(document).ready(function() {
     }
     else {
         var windowHeight = jQuery(window).height() + 70;
-        console.log('ipod');
     }
     windowWidth = jQuery(window).width();
     welcomeHeight = jQuery('#welcome').outerHeight();
@@ -167,10 +163,20 @@ jQuery(document).ready(function() {
 
     // About us welcome push
 
-    jQuery('#about-us-info').css('margin-top', windowHeight);
-
-    jQuery(window).resize(function() {
+    if(!(/iPhone|iPod/i).test(navigator.userAgent || navigator.vendor || window.opera)){
         jQuery('#about-us-info').css('margin-top', windowHeight);
+    }
+    else{
+        jQuery('#about-us-info').css('margin-top', windowHeight - 70);
+    }
+    
+    jQuery(window).resize(function() {
+        if(!(/iPhone|iPod/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+            jQuery('#about-us-info').css('margin-top', windowHeight);
+        }
+        else{
+            jQuery('#about-us-info').css('margin-top', windowHeight - 70);
+        }
     });
 
     // Page height fix
@@ -291,14 +297,12 @@ function enableScroll(){
 function skrollrSingleton(){
     jQuery('.lazy-load.fade').each(function(){
         $(this).removeAttr('data-edge-strategy data-top-bottom data-bottom-top');
-        console.log('ughhh');
     });
     skrollr.refresh();
 
     $(window).scroll(function(){
         jQuery('.lazy-load.fade').each(function(){
             $(this).removeAttr('data-edge-strategy data-top-bottom data-bottom-top');
-            console.log('ughhh');
         });
         skrollr.refresh();
     });
@@ -314,7 +318,6 @@ function mobileBG() {
             .load(function() {
                 picRealWidth = this.width;   // Note: $(this).width() will not
                 picRealHeight = this.height; // work for in memory images.
-                console.log(img);
                 ratio = picRealWidth / picRealHeight;
 
                 if(landscape && windowAspect >= ratio){

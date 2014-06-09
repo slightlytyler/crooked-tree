@@ -22,7 +22,7 @@ get_header(); ?>
     </section>
     <section id="welcome">
       <section id="mission-statement" data-0="margin-top: -13%; opacity: 1;" data-320="margin-top: -4%; opacity: 0;">
-        <h2>People. Atmosphere. Coffee.</h2>
+        <h2><?php echo get_post_meta(4,'Tag line',true); ?></h2>
       </section>
       <a href="#welcome" class="hash-nav">
         <div class="tab" data-0="top: -64px; background-color: rgba(255,255,255,1); color: rgba(191,211,59,1);" data-180="top: 0px; background-color: rgba(255,255,255,0); color: rgba(191,211,59,0);">
@@ -32,12 +32,10 @@ get_header(); ?>
       <section class="header">
         <i class="fa fa-coffee"></i>
       </section>
-      <h3>WELCOME</h3>
+      <h3><?php echo get_post_meta(4,'Welcome header',true); ?></h3>
       <div>
         <p>
-          Hello! To say a little bit about ourselves, we are an independent, neighborhood coffeehouse through 
-          and through. We operate in a historic house in the State-Thomas district of Uptown Dallas. And, we are 
-          passionate about coffee and people.
+          <?php echo get_post_meta(4,'Welcome body',true); ?>
         </p>
       </div>
     </section>
@@ -52,14 +50,8 @@ get_header(); ?>
       <section class="bg" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -120px;">
       </section>
       <section class="description" data-bottom-top="@class:description fade;" data-top-bottom="@class:description fade;" data-edge-strategy="reset">
-        <h4>ORIGINS</h4>
-        <p>
-          Crooked Tree Coffeehouse is as a dream of our owners Kristyn Bartley and Sarah Momary.
-          Having backgrounds at indie shops, they desire to create a place that is people forward and 
-          economically responsible.</p><br> 
-          <p>They feel that the coffeehouse provides a unique opportunity to feature 
-          people, from our employees, to our customers, to the producers of our coffee.
-        </p>
+        <h4><?php echo get_post_meta(4,'Origins header',true); ?></h4>
+        <?php echo get_post_meta(4,'Origins body',true); ?>
       </section>
       <section id="founded" class="lazy-load" data-bottom-top="@class:fade;" data-top-bottom="@class:fade;" data-edge-strategy="reset">
         <h5>FOUNDED</h5>
@@ -82,17 +74,14 @@ get_header(); ?>
         </div>
       </a>
       <section class="header">
-        <h3>OUR MISSION</h3>
+        <h3><?php echo get_post_meta(4,'Mission header',true); ?></h3>
       </section>
       <ul>
         <li class="lazy-load" data-bottom-top="@class:fade;" data-top-bottom="@class:fade;" data-edge-strategy="reset">
           <section class="description">
-             <h4>PEOPLE</h4>
+             <h4><?php echo get_post_meta(4,'People header',true); ?></h4>
               <p>
-                We aim to be a great place to work and to visit. At Crooked Tree, we hope that our
-                customer experience is both inviting and quality-driven. We want to employ friendly people who 
-                can share positivity and sincerity with our customers, as well as making a beautifully tasting cup 
-                of coffee. We hope that you feel at home and taken care of when you come to visit us.
+                <?php echo get_post_meta(4,'People body',true); ?>
               </p>
             </section>
             <section class="imagery">
@@ -115,12 +104,9 @@ get_header(); ?>
         </li>
         <li class="lazy-load" data-bottom-top="@class:fade;" data-top-bottom="@class:fade;" data-edge-strategy="reset">
             <section class="description mobile">
-              <h4>ATMOSPHERE</h4>
+              <h4><?php echo get_post_meta(4,'Atmosphere header',true); ?></h4>
               <p>
-                Our atmosphere stands out, as it is eclectic and comfortable. Sometimes we like to say
-                that we have a living room feel. In addition to our warmly colored walls, we have a variety of 
-                seating from couches, to tables both big and small, to a back patio, or, should you choose to 
-                have your drink more quickly over a brief chat, we have a standing bar at our espresso machine.
+                <?php echo get_post_meta(4,'Atmosphere body',true); ?>
               </p>
             </section>
             <section class="imagery">
@@ -141,42 +127,33 @@ get_header(); ?>
               </section>
             </section>
             <section class="description non-mobile">
-              <h4>ATMOSPHERE</h4>
+              <h4><?php echo get_post_meta(4,'Atmosphere header',true); ?></h4>
               <p>
-                Our atmosphere stands out, as it is eclectic and comfortable. Sometimes we like to say
-                that we have a living room feel. In addition to our warmly colored walls, we have a variety of 
-                seating from couches, to tables both big and small, to a back patio, or, should you choose to 
-                have your drink more quickly over a brief chat, we have a standing bar at our espresso machine.
+                <?php echo get_post_meta(4,'Atmosphere body',true); ?>
               </p>
           </section>
         </li>
         <li class="lazy-load" data-bottom-top="@class:fade;" data-top-bottom="@class:fade;" data-edge-strategy="reset">
           <section class="header">
-            <h4>PRODUCT</h4>
+            <h4><?php echo get_post_meta(4,'Product header',true); ?></h4>
           </section>
-          <span>We are committed to consistently making quality beverages and food.</span>
+          <span><?php echo get_post_meta(4,'Product tag line',true); ?></span>
           <section class="focus coffee">
             <i class="icomoon icomoon-bean"></i>
             <p>
-              Our coffee is
-              locally roasted by Oak Cliff Coffee Roasters, where they buy directly from farmers to ensure 
-              quality of taste and economic responsibility.
+              <?php echo get_post_meta(4,'Product focus 1',true); ?>
             </p>
           </section>
           <section class="focus brew">
             <i class="icomoon icomoon-tea"></i>
             <p>
-              On our end, we are committed to brewing and
-              training standards that facilitate the best tasting coffee possible. We also source amazing 
-              loose leaf teas from a local company called Zakti.
+              <?php echo get_post_meta(4,'Product focus 2',true); ?>
             </p>
           </section>
           <section class="focus food">
             <i class="icomoon icomoon-cupcake"></i>
             <p>
-              Regarding food, our pastries come from local
-              bakeries, such as Empire and Zenzero, and our sandwich menu is made of delightful, house 
-              recipes.
+              <?php echo get_post_meta(4,'Product focus 3',true); ?>
             </p>
           </section>
         </li>

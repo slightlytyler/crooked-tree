@@ -39,7 +39,7 @@
 
 #index-logo{
   margin: 0 auto;
-  @include retina-image(assets/images/logo, 75% 0 cover, png, null, 2x, false);
+  @include retina-image(assets/images/Logo, 75% 0 cover, png, null, -2x, false);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
