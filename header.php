@@ -30,9 +30,9 @@
       </nav>
       <section id="mailing-list">
         <h1>SUBSCRIBE</h1>
-        <form action="">
-          <input type="text" name="email" placeholder="jdoe@biz.com">
-          <button class="fa fa-play-circle" type="submit">
+        <form action="http://deepspacerobots.createsend.com/t/r/s/biujdk/" method="post">
+          <input name="email" type="text" name="cm-biujdk-biujdk" id="biujdk-biujdk" placeholder="jdoe@biz.com" onclick="$(this).val('');">
+          <button class="fa fa-play-circle" type="submit" name="mailing_list_submit" id="mailing_list_submit">
           </button>
         </form> 
       </section>

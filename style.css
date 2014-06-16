@@ -925,7 +925,7 @@ html {
     margin: 0 auto;
     border: none;
     border-radius: 0;
-    padding-right: 3em; }
+    padding: .7em 3em .7em 1em; }
   #mailing-list button[type="submit"] {
     position: absolute;
     padding: 0;
@@ -937,7 +937,7 @@ html {
     text-shadow: none;
     font-size: 2em;
     color: #472e13;
-    top: .52em;
+    top: .6em;
     right: 0;
     -webkit-transform: translate3D(-50%, -50%, 0);
     -moz-transform: translate3D(-50%, -50%, 0);
