@@ -1,7 +1,7 @@
 Crooked Tree
 ===
 
-Live version [here](http://crooked.deepspacerobots.com).
+Live version [here](http://crookedtreecoffeehouse.com).
 Word press theme designed and devloped for Crooked Tree Coffee House in Dallas, Tx. Key features include :
 
 * Hambruger drawer navigation
